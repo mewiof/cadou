@@ -1,0 +1,50 @@
+# pinned benchmark toolchains (latest stable releases on 2026-10-11)
+# python bench/harness/bench.py fetch downloads/checks/unpacks them into .toolchains/
+# rustup installs the Rust pin: rustup toolchain install 1.99.0 --profile minimal
+#
+# hosts without an entry fall back to PATH (the run records that it was not pinned)
+# e.g. GCC on Linux (no official binaries exist)
+
+[rust]
+version = "1.99.0"
+
+[zig]
+version = "0.17.0"
+bin = "."
+
+[zig.x86_64-windows]
+url = "https://ziglang.org/download/0.17.0/zig-x86_64-windows-0.17.0.zip"
+sha256 = "b5663f69581dcf391293fbf16c06cb80d81d806545ce618b4d0bab7f0eb8c428"
+
+[zig.x86_64-linux]
+url = "https://ziglang.org/download/0.17.0/zig-x86_64-linux-0.17.0.tar.xz"
+sha256 = "1cbe9df9f27e6b78d14ccbca43b6703a404ef79ef1c463de901d7f088d4e2026"
+
+[zig.aarch64-linux]
+url = "https://ziglang.org/download/0.17.0/zig-aarch64-linux-0.17.0.tar.xz"
+sha256 = "9e8d11661d4ae3bd57702a3832781e23ad151dde5798e16a5ccd503f65234ff8"
+
+[llvm]
+version = "23.1.3"
+bin = "bin"
+
+[llvm.x86_64-windows]
+url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.3/clang+llvm-23.1.3-x86_64-pc-windows-msvc.tar.xz"
+sha256 = "9ee6a2192fbb30c776415af529927f76ca6b5d1d55699bb1315f9878e610b5b8"
+
+[llvm.x86_64-linux]
+url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.3/LLVM-23.1.3-Linux-X64.tar.xz"
+sha256 = "ca9fe385a5d9e2d88132dc0e23a00e9f87f38fa75f67207b5e457d208e71d013"
+
+[llvm.aarch64-linux]
+url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.3/LLVM-23.1.3-Linux-ARM64.tar.xz"
+sha256 = "56d005e339c979a696ed6c244e6472e16f3b1371e48987a07e6145bda7ee0d03"
+
+[gcc]
+version = "16.2.0"
+bin = "bin"
+
+# winlibs build: GCC 16.2.0 + MinGW-w64 14.0.0 (UCRT/POSIX threads/SEH)
+[gcc.x86_64-windows]
+url = "https://github.com/brechtsanders/winlibs_mingw/releases/download/16.2.0posix-14.0.0-ucrt-r2/winlibs-x86_64-posix-seh-gcc-16.2.0-mingw-w64ucrt-14.0.0-r2.zip"
+sha256 = "d5dbafc4a170e762ca6143151ec918fb9e2c72736fb14cd704abebc6bdd5276a"
