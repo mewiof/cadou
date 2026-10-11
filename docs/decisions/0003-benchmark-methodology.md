@@ -31,6 +31,7 @@ The only machine today is a Windows 11 desktop with an Intel Core i7-14700KF (hy
 - g++ on MinGW does not link `std::print` without `-lstdc++exp` (GCC 16.2.0 reports `undefined reference to std::__open_terminal`).
 - Since Rust 1.77 Cargo release builds strip debuginfo when `debug = 0` ([Rust 1.77.0 announcement](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0/) from 2024-03-21).
 - In Zig 0.17.0 `std.process.Init` hands `main` the SMP allocator as `gpa` in ReleaseFast when libc is not linked (`callMain` in `lib/std/start.zig`).
+- clang 23.1.3 for `x86_64-pc-windows-msvc` passes `-fwrapv` and `-relaxed-aliasing` to its front end by default (MSVC compatibility). Adding `-fno-wrapv -fstrict-aliasing` changes clang's code for every benchmark and its time by -4% to +8% (geometric mean +1.3% for C and 0.0% for C++) per [clang-msvc.md](../research/clang-msvc.md) from 2026-10-11.
 
 ## Decision
 
@@ -90,6 +91,7 @@ Binary size: the file as built + a copy run through `llvm-strip --strip-all`. On
 
 - Windows numbers include Windows process creation. binary-trees also measures the Windows heap (UCRT `malloc` behind C/C++/Rust against Zig's own SMP allocator). These numbers carry the host label and do not compare with Linux numbers.
 - clang on Windows uses the MSVC STL with UCRT. g++ uses libstdc++ with UCRT through MinGW. On Linux both would use libstdc++ and glibc.
+- clang on Windows keeps its MSVC-compatible defaults (wrapping signed overflow and no type-based alias analysis). On Linux clang compiles with standard C and C++ semantics.
 - The first baseline has no IPC or cache data (no hardware counters until a Linux host exists).
 - Turning contraction off may cost C/C++ speed their default flags would get. Rust and Zig would need explicit fused calls for the same.
 

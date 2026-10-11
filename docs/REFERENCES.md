@@ -73,3 +73,5 @@ Sources behind the survey/ADRs/benchmarks. "read" is the date a source was last 
 | Cranelift | read 2026-10-11 | https://cranelift.dev/ |
 | QBE | read 2026-10-11 | https://c9x.me/compile/ |
 | pinned toolchains with checksums | clang 23.1.3/GCC 16.2.0/Rust 1.99.0/Zig 0.17.0 | [bench/toolchains.toml](../bench/toolchains.toml) |
+| uops.info latency and throughput tables (`vdivpd`/`vdivsd` on Alder Lake-P) | read 2026-10-11 | https://uops.info/ |
+| x86 instruction reference built from Intel's SDM (`vpmullq`/`vcvtqq2pd` need AVX512DQ) | read 2026-10-11 | https://www.felixcloutier.com/x86/ |

@@ -1,0 +1,6571 @@
+{
+	"experiment": "clang-msvc",
+	"machine": {
+		"recorded_utc": "2026-10-11T18:31:05+00:00",
+		"os": {
+			"system": "Windows",
+			"release": "11",
+			"version": "10.0.26300",
+			"machine": "AMD64",
+			"build": 26300
+		},
+		"cpu": {
+			"logical_cpus": 28,
+			"model": "Intel(R) Core(TM) i7-14700KF",
+			"identifier": "Intel64 Family 6 Model 183 Stepping 1",
+			"nominal_mhz": 3418,
+			"topology": {
+				"0": {
+					"core": 0,
+					"kind": "performance"
+				},
+				"1": {
+					"core": 0,
+					"kind": "performance"
+				},
+				"2": {
+					"core": 2,
+					"kind": "performance"
+				},
+				"3": {
+					"core": 2,
+					"kind": "performance"
+				},
+				"4": {
+					"core": 4,
+					"kind": "performance"
+				},
+				"5": {
+					"core": 4,
+					"kind": "performance"
+				},
+				"6": {
+					"core": 6,
+					"kind": "performance"
+				},
+				"7": {
+					"core": 6,
+					"kind": "performance"
+				},
+				"8": {
+					"core": 8,
+					"kind": "performance"
+				},
+				"9": {
+					"core": 8,
+					"kind": "performance"
+				},
+				"10": {
+					"core": 10,
+					"kind": "performance"
+				},
+				"11": {
+					"core": 10,
+					"kind": "performance"
+				},
+				"12": {
+					"core": 12,
+					"kind": "performance"
+				},
+				"13": {
+					"core": 12,
+					"kind": "performance"
+				},
+				"14": {
+					"core": 14,
+					"kind": "performance"
+				},
+				"15": {
+					"core": 14,
+					"kind": "performance"
+				},
+				"16": {
+					"core": 16,
+					"kind": "efficiency"
+				},
+				"17": {
+					"core": 17,
+					"kind": "efficiency"
+				},
+				"18": {
+					"core": 18,
+					"kind": "efficiency"
+				},
+				"19": {
+					"core": 19,
+					"kind": "efficiency"
+				},
+				"20": {
+					"core": 20,
+					"kind": "efficiency"
+				},
+				"21": {
+					"core": 21,
+					"kind": "efficiency"
+				},
+				"22": {
+					"core": 22,
+					"kind": "efficiency"
+				},
+				"23": {
+					"core": 23,
+					"kind": "efficiency"
+				},
+				"24": {
+					"core": 24,
+					"kind": "efficiency"
+				},
+				"25": {
+					"core": 25,
+					"kind": "efficiency"
+				},
+				"26": {
+					"core": 26,
+					"kind": "efficiency"
+				},
+				"27": {
+					"core": 27,
+					"kind": "efficiency"
+				}
+			},
+			"physical_cores": 20
+		},
+		"memory_bytes": 34103820288,
+		"power": {
+			"scheme": "High performance"
+		},
+		"python": "3.13.12",
+		"repository": {
+			"commit": "92c5a20e18ac45b876eaa27d1dea4920a9fa4500",
+			"modified": true
+		},
+		"pinned_cpu": 4,
+		"pinned_cpu_kind": {
+			"core": 4,
+			"kind": "performance"
+		}
+	},
+	"toolchains": {
+		"clang": {
+			"path": ".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+			"pinned": true,
+			"version": "clang version 23.1.3 (https://github.com/llvm/llvm-project 0d261d1ca552c95a8f007e061c787ac7132fbcbc)"
+		},
+		"clang++": {
+			"path": ".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+			"pinned": true,
+			"version": "clang version 23.1.3 (https://github.com/llvm/llvm-project 0d261d1ca552c95a8f007e061c787ac7132fbcbc)"
+		},
+		"llvm-strip": {
+			"path": ".\\.toolchains\\llvm-23.1.3\\bin\\llvm-strip.exe",
+			"pinned": true,
+			"version": "LLVM version 23.1.3"
+		},
+		"gcc": {
+			"path": ".\\.toolchains\\gcc-16.2.0\\bin\\gcc.exe",
+			"pinned": true,
+			"version": "gcc.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 16.2.0"
+		},
+		"g++": {
+			"path": ".\\.toolchains\\gcc-16.2.0\\bin\\g++.exe",
+			"pinned": true,
+			"version": "g++.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 16.2.0"
+		},
+		"strip": {
+			"path": ".\\.toolchains\\gcc-16.2.0\\bin\\strip.exe",
+			"pinned": true,
+			"version": "GNU strip (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r2) 2.47.20260726"
+		},
+		"zig": {
+			"path": ".\\.toolchains\\zig-0.17.0\\zig.exe",
+			"pinned": true,
+			"version": "0.17.0"
+		},
+		"rustc": {
+			"path": "~\\.cargo\\bin\\rustc.exe",
+			"pinned": true,
+			"version": "rustc 1.99.0 (b940084d7 2026-09-28)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.0\nLLVM version: 23.1.1"
+		}
+	},
+	"protocol": {
+		"reps": 30,
+		"warmup": 3,
+		"cpu": 4,
+		"seed": 1,
+		"priority": "high"
+	},
+	"cases": [
+		{
+			"benchmark": "binary-trees",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "f588ec84ebabe1de7de40df39482413ee2ccd02c9bcca2e11c69f6acd3217cd3",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-c-clang.exe"
+			],
+			"output_sha256": "0bba728e95e9f2076c758d2e6f3c91307eb7824601efddf970311f913d899256",
+			"samples": [
+				{
+					"wall_ns": 3056765900,
+					"user_ns": 2953125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10415872747,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3060807100,
+					"user_ns": 2953125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10425185374,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3098418800,
+					"user_ns": 3031250000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10557717671,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3065134500,
+					"user_ns": 2937500000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10445852019,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3134255100,
+					"user_ns": 3015625000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10542611485,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3189929900,
+					"user_ns": 3062500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10666446955,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3102404700,
+					"user_ns": 3046875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10574266563,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3139026300,
+					"user_ns": 2968750000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10623391128,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3114537100,
+					"user_ns": 2906250000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10575254720,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3116319800,
+					"user_ns": 2781250000,
+					"system_ns": 296875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10587202068,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3171814100,
+					"user_ns": 2781250000,
+					"system_ns": 359375000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10569270876,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3119887800,
+					"user_ns": 2937500000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10601215841,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3159175900,
+					"user_ns": 2890625000,
+					"system_ns": 250000000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10670901554,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3133328300,
+					"user_ns": 2968750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10602265467,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3101444600,
+					"user_ns": 2890625000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10528299979,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3218482400,
+					"user_ns": 2921875000,
+					"system_ns": 281250000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10812011777,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3115138300,
+					"user_ns": 2906250000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10586109930,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3191772600,
+					"user_ns": 2984375000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10738684695,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3149883300,
+					"user_ns": 2859375000,
+					"system_ns": 265625000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10625774830,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3150694400,
+					"user_ns": 2828125000,
+					"system_ns": 296875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10703230187,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3152047600,
+					"user_ns": 3093750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10698052887,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3101717800,
+					"user_ns": 2968750000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71016448,
+					"reference_cycles": 10529429272,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3088145300,
+					"user_ns": 3015625000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71016448,
+					"reference_cycles": 10513867441,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3097172200,
+					"user_ns": 2937500000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10461564537,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3091225100,
+					"user_ns": 3000000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10527137546,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3121122700,
+					"user_ns": 3046875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10563542989,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3198301300,
+					"user_ns": 3015625000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10750021903,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3134601000,
+					"user_ns": 3078125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10675736380,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3107122500,
+					"user_ns": 2968750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10513291521,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3079302100,
+					"user_ns": 2968750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10435987668,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "binary-trees",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "f588ec84ebabe1de7de40df39482413ee2ccd02c9bcca2e11c69f6acd3217cd3",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "0bba728e95e9f2076c758d2e6f3c91307eb7824601efddf970311f913d899256",
+			"samples": [
+				{
+					"wall_ns": 3090235600,
+					"user_ns": 3015625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10524667292,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3089385600,
+					"user_ns": 3046875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10526970734,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3098951300,
+					"user_ns": 3046875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10553121827,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3085326800,
+					"user_ns": 2984375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10509558784,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3078524500,
+					"user_ns": 3000000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10444291714,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3158372100,
+					"user_ns": 3000000000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10658021957,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3184721600,
+					"user_ns": 2906250000,
+					"system_ns": 234375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10788286630,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3116234400,
+					"user_ns": 2718750000,
+					"system_ns": 343750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10552644394,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3128643600,
+					"user_ns": 2828125000,
+					"system_ns": 281250000,
+					"peak_memory_bytes": 71016448,
+					"reference_cycles": 10566829374,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3185024800,
+					"user_ns": 2984375000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10666178010,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3138369600,
+					"user_ns": 2906250000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10649417829,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3168443200,
+					"user_ns": 2937500000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10670056766,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3201902200,
+					"user_ns": 2937500000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10784139614,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3109086900,
+					"user_ns": 2828125000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10548158570,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3108599800,
+					"user_ns": 2921875000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10554948686,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3183414400,
+					"user_ns": 2953125000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10617141601,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3144299000,
+					"user_ns": 2937500000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10627957559,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3077477900,
+					"user_ns": 2875000000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10451671547,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3218667500,
+					"user_ns": 2906250000,
+					"system_ns": 265625000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10739004604,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3077659800,
+					"user_ns": 2968750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10461835618,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3127997700,
+					"user_ns": 3046875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10650627488,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3143261200,
+					"user_ns": 3062500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10659604497,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3089145500,
+					"user_ns": 3015625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10526148324,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3131770300,
+					"user_ns": 3046875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71024640,
+					"reference_cycles": 10618291078,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3090031900,
+					"user_ns": 2953125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10491093314,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3131415600,
+					"user_ns": 2984375000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10612110021,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3171966100,
+					"user_ns": 3078125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10626856292,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3227761200,
+					"user_ns": 2953125000,
+					"system_ns": 234375000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10777134769,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3128616100,
+					"user_ns": 3062500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10637759661,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3162204900,
+					"user_ns": 3109375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71020544,
+					"reference_cycles": 10772997026,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "binary-trees",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "b83226f40b22b38a89fc78535e39f72f4a35b8986116ea1f5d524169fdf4ef77",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-cpp-clang.exe"
+			],
+			"output_sha256": "0bba728e95e9f2076c758d2e6f3c91307eb7824601efddf970311f913d899256",
+			"samples": [
+				{
+					"wall_ns": 3425696100,
+					"user_ns": 3343750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11669996059,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3454755700,
+					"user_ns": 3406250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11754653037,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3441792300,
+					"user_ns": 3343750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11720535996,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3489189100,
+					"user_ns": 3406250000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11807622523,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3550262400,
+					"user_ns": 3281250000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11869487988,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3472121000,
+					"user_ns": 3375000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11740612942,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3451075300,
+					"user_ns": 3375000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11716065576,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3483484200,
+					"user_ns": 3390625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11766752434,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3477024100,
+					"user_ns": 2937500000,
+					"system_ns": 234375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11735440476,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3529547500,
+					"user_ns": 3296875000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11784737281,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3449111300,
+					"user_ns": 3171875000,
+					"system_ns": 265625000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11717272759,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3465495000,
+					"user_ns": 3281250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11760909970,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3461320000,
+					"user_ns": 3234375000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11749951040,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3487181900,
+					"user_ns": 3203125000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 71045120,
+					"reference_cycles": 11719728004,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3452748800,
+					"user_ns": 3250000000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11737330989,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3534465400,
+					"user_ns": 3156250000,
+					"system_ns": 343750000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11838988470,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3508579300,
+					"user_ns": 3156250000,
+					"system_ns": 312500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11791276600,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3551591900,
+					"user_ns": 3265625000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11844174313,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3475610000,
+					"user_ns": 3234375000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11743191248,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3462080700,
+					"user_ns": 3171875000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11756524079,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3452753900,
+					"user_ns": 3296875000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11704109102,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3437222300,
+					"user_ns": 3296875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11709275391,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3431343100,
+					"user_ns": 3359375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11688964935,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3491674000,
+					"user_ns": 3406250000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11833537801,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3456340800,
+					"user_ns": 3421875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11757518065,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3508177900,
+					"user_ns": 3359375000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11825149674,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3515132000,
+					"user_ns": 3375000000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11827800015,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3440393200,
+					"user_ns": 3359375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11709591170,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3537168800,
+					"user_ns": 3406250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 12001797752,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3453960200,
+					"user_ns": 3312500000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11734637283,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "binary-trees",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "b83226f40b22b38a89fc78535e39f72f4a35b8986116ea1f5d524169fdf4ef77",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\binary-trees-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "0bba728e95e9f2076c758d2e6f3c91307eb7824601efddf970311f913d899256",
+			"samples": [
+				{
+					"wall_ns": 3429918900,
+					"user_ns": 3328125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11686096217,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3420658600,
+					"user_ns": 3312500000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11652472981,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3438428400,
+					"user_ns": 3359375000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11707322316,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3427614600,
+					"user_ns": 3343750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11680676289,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3500168800,
+					"user_ns": 3312500000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11715675258,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3516730200,
+					"user_ns": 3453125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11845494574,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3475197800,
+					"user_ns": 3390625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11819987777,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3488437900,
+					"user_ns": 3234375000,
+					"system_ns": 218750000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11758915348,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3487500000,
+					"user_ns": 3296875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11801335478,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3449117600,
+					"user_ns": 3187500000,
+					"system_ns": 250000000,
+					"peak_memory_bytes": 71045120,
+					"reference_cycles": 11719965539,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3511151300,
+					"user_ns": 3218750000,
+					"system_ns": 296875000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11785659357,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3455331400,
+					"user_ns": 3281250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11700408794,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3497090500,
+					"user_ns": 3093750000,
+					"system_ns": 359375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11792772701,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3464416800,
+					"user_ns": 3140625000,
+					"system_ns": 328125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11768638525,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3474607300,
+					"user_ns": 3234375000,
+					"system_ns": 234375000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11788018223,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3507237000,
+					"user_ns": 3250000000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11818221669,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3439379200,
+					"user_ns": 3125000000,
+					"system_ns": 312500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11691994732,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3459478500,
+					"user_ns": 3296875000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 71045120,
+					"reference_cycles": 11755801810,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3468475800,
+					"user_ns": 3281250000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11738093179,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3494909700,
+					"user_ns": 3078125000,
+					"system_ns": 296875000,
+					"peak_memory_bytes": 71045120,
+					"reference_cycles": 11843311995,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3462533500,
+					"user_ns": 3328125000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11722630198,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3454595700,
+					"user_ns": 3359375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11742343462,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3437908000,
+					"user_ns": 3328125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11707257028,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3455860300,
+					"user_ns": 3328125000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71053312,
+					"reference_cycles": 11711526163,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3448533400,
+					"user_ns": 3312500000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11720728400,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3543634200,
+					"user_ns": 3328125000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11815699248,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3532024600,
+					"user_ns": 3390625000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 71045120,
+					"reference_cycles": 11868476236,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3539830500,
+					"user_ns": 3343750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11846871717,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3449297700,
+					"user_ns": 3343750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11710779630,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 3451940300,
+					"user_ns": 3281250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 71049216,
+					"reference_cycles": 11723231038,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fannkuch-redux",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "32b86224c8cbdb5b54d3dc5e2ff7e7ad62ca7324ad750fbe9bf126f0e42f12a9",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-c-clang.exe"
+			],
+			"output_sha256": "496853c07b61c35473bd742f66bbcf51dc054288614ab62f1529fc07703ebdb5",
+			"samples": [
+				{
+					"wall_ns": 1518301600,
+					"user_ns": 1484375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5166655976,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1515415000,
+					"user_ns": 1484375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5157519985,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1518681100,
+					"user_ns": 1468750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5160530589,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1534447900,
+					"user_ns": 1484375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5226042352,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1552475700,
+					"user_ns": 1468750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5169257106,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1540089400,
+					"user_ns": 1468750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5230763979,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1529157400,
+					"user_ns": 1437500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5168602904,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1551506400,
+					"user_ns": 1453125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5233404788,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1534557600,
+					"user_ns": 1421875000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5165494215,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1572475900,
+					"user_ns": 1453125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5239403271,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1536477400,
+					"user_ns": 1343750000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5171114130,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1522897100,
+					"user_ns": 1453125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5167341913,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1572016200,
+					"user_ns": 1421875000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5237550776,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1526926300,
+					"user_ns": 1437500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5169044468,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1523119700,
+					"user_ns": 1390625000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5170728892,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1562787700,
+					"user_ns": 1468750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3792896,
+					"reference_cycles": 5168200198,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1520156300,
+					"user_ns": 1421875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5165819237,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1543863300,
+					"user_ns": 1406250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5171033727,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1530161500,
+					"user_ns": 1421875000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5170684102,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1540035000,
+					"user_ns": 1406250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5230535316,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1526415000,
+					"user_ns": 1515625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5165944341,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1534024200,
+					"user_ns": 1515625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5224671761,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1520435200,
+					"user_ns": 1500000000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5166703470,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1521139900,
+					"user_ns": 1500000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5158284590,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1527461800,
+					"user_ns": 1453125000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5167928507,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1542544700,
+					"user_ns": 1500000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5228016611,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1571934100,
+					"user_ns": 1437500000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5237852897,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1541245600,
+					"user_ns": 1531250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5226299734,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1523141400,
+					"user_ns": 1484375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5163846031,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1521059400,
+					"user_ns": 1515625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5166795080,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fannkuch-redux",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "32b86224c8cbdb5b54d3dc5e2ff7e7ad62ca7324ad750fbe9bf126f0e42f12a9",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "496853c07b61c35473bd742f66bbcf51dc054288614ab62f1529fc07703ebdb5",
+			"samples": [
+				{
+					"wall_ns": 1499089500,
+					"user_ns": 1500000000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5105366815,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1499522100,
+					"user_ns": 1421875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5104189615,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1499652300,
+					"user_ns": 1406250000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5106826954,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1510223100,
+					"user_ns": 1484375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5115035271,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1547132000,
+					"user_ns": 1484375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5165911171,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1512744600,
+					"user_ns": 1484375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5109066120,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1500319000,
+					"user_ns": 1468750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5106690919,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1531109900,
+					"user_ns": 1437500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5162354082,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1504889700,
+					"user_ns": 1421875000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5109682387,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1531909900,
+					"user_ns": 1406250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5115758843,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1527944300,
+					"user_ns": 1453125000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5117321261,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1525568700,
+					"user_ns": 1421875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5117263829,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1519504300,
+					"user_ns": 1421875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5113802062,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1549453400,
+					"user_ns": 1406250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5120629850,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1504322400,
+					"user_ns": 1359375000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5109109151,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1526442100,
+					"user_ns": 1312500000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5114355822,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1532004600,
+					"user_ns": 1390625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5162811095,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1536738000,
+					"user_ns": 1375000000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5121601236,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1524644500,
+					"user_ns": 1390625000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5114792291,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1506394500,
+					"user_ns": 1328125000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5112778691,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1511208600,
+					"user_ns": 1484375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5114658311,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1521896500,
+					"user_ns": 1515625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5159884271,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1517365900,
+					"user_ns": 1468750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5160870681,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1525518900,
+					"user_ns": 1484375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5162429239,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1520589900,
+					"user_ns": 1453125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3805184,
+					"reference_cycles": 5125279710,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1504148300,
+					"user_ns": 1484375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5111287455,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1545189300,
+					"user_ns": 1453125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5165875973,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1532633900,
+					"user_ns": 1468750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5114426894,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1512803700,
+					"user_ns": 1437500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3796992,
+					"reference_cycles": 5106729244,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1498556900,
+					"user_ns": 1453125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3801088,
+					"reference_cycles": 5103338889,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fannkuch-redux",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "7fd520600cdcd81044912828b257e81e623f87bf55871e78ed0d1776874b8a81",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-cpp-clang.exe"
+			],
+			"output_sha256": "496853c07b61c35473bd742f66bbcf51dc054288614ab62f1529fc07703ebdb5",
+			"samples": [
+				{
+					"wall_ns": 2029041600,
+					"user_ns": 2015625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6912696173,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2030730600,
+					"user_ns": 2000000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6915102430,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2031848800,
+					"user_ns": 2015625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6917298836,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2028311600,
+					"user_ns": 2000000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6909182450,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2068678500,
+					"user_ns": 2015625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6919550270,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2034954200,
+					"user_ns": 1984375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6915985961,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2041417100,
+					"user_ns": 1968750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6914495029,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2015481100,
+					"user_ns": 1906250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6825955853,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2021029900,
+					"user_ns": 1906250000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6831007068,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2052897400,
+					"user_ns": 1937500000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6918726920,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2050850700,
+					"user_ns": 1953125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6839766982,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2035290600,
+					"user_ns": 1953125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6918599449,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2020297800,
+					"user_ns": 1921875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6831633526,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2042961600,
+					"user_ns": 1859375000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6912009492,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2036371200,
+					"user_ns": 1921875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6915070004,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2045934000,
+					"user_ns": 1968750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6917563715,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2014030900,
+					"user_ns": 1906250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6836473381,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2071094500,
+					"user_ns": 1953125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6920862112,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2046667700,
+					"user_ns": 1968750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6918236100,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2038656000,
+					"user_ns": 1859375000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6910500497,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2041508900,
+					"user_ns": 2015625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6908879294,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2013871200,
+					"user_ns": 1984375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6824394865,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2031072300,
+					"user_ns": 2000000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6915132161,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2013706700,
+					"user_ns": 1984375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6833417374,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2040872100,
+					"user_ns": 1828125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6912631590,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2047801600,
+					"user_ns": 1921875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6836670627,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2078391000,
+					"user_ns": 1968750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6913778628,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2074297300,
+					"user_ns": 1953125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6911011422,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2034820700,
+					"user_ns": 2000000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6914281438,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2038616700,
+					"user_ns": 2000000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3850240,
+					"reference_cycles": 6908710063,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fannkuch-redux",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "7fd520600cdcd81044912828b257e81e623f87bf55871e78ed0d1776874b8a81",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fannkuch-redux-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "496853c07b61c35473bd742f66bbcf51dc054288614ab62f1529fc07703ebdb5",
+			"samples": [
+				{
+					"wall_ns": 1939308000,
+					"user_ns": 1890625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6606725325,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1939845000,
+					"user_ns": 1906250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6607489646,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1957952900,
+					"user_ns": 1953125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6667441025,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1956954000,
+					"user_ns": 1953125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6663340407,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1949939900,
+					"user_ns": 1875000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6600310465,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1965628700,
+					"user_ns": 1921875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6600084858,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1968818700,
+					"user_ns": 1937500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6700677603,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1971389500,
+					"user_ns": 1875000000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6659299357,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1986485200,
+					"user_ns": 1921875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6693634107,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1977560400,
+					"user_ns": 1828125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6601614785,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1977736900,
+					"user_ns": 1750000000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6600652312,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1940231800,
+					"user_ns": 1781250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6599134661,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1989448800,
+					"user_ns": 1859375000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6692548624,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1985672500,
+					"user_ns": 1750000000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6694498239,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1971167100,
+					"user_ns": 1812500000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6700215488,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1954045200,
+					"user_ns": 1843750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6600253050,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1954102600,
+					"user_ns": 1781250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6603115599,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1969956500,
+					"user_ns": 1796875000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6598537496,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1948755200,
+					"user_ns": 1828125000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6601495453,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1975362200,
+					"user_ns": 1937500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6712356238,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1963220700,
+					"user_ns": 1953125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6669889282,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1947000200,
+					"user_ns": 1875000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6602946732,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1967477400,
+					"user_ns": 1937500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6698160980,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1942925700,
+					"user_ns": 1921875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6609499391,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1945823900,
+					"user_ns": 1937500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6606927361,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1959747000,
+					"user_ns": 1906250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6602911562,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2000126100,
+					"user_ns": 1875000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6693557904,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1982459900,
+					"user_ns": 1937500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3858432,
+					"reference_cycles": 6696670314,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1942772800,
+					"user_ns": 1906250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6606959467,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1942441800,
+					"user_ns": 1890625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3854336,
+					"reference_cycles": 6605270647,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fasta",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "e2e3555b507ef6597465083ae4806556272d1abcd9502cef5fb59fcb1d2b27ab",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-c-clang.exe"
+			],
+			"output_sha256": "3fcf4f78104c8a65ef210fe1d469f4e473456c791225f2f1f9114f4986aa09fa",
+			"samples": [
+				{
+					"wall_ns": 1785474700,
+					"user_ns": 1750000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6080298974,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1786207600,
+					"user_ns": 1734375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6081061543,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1789222200,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6092300622,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1791673000,
+					"user_ns": 1750000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6079394572,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1805693600,
+					"user_ns": 1718750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6095343980,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1799917800,
+					"user_ns": 1796875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6093962796,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1800273300,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6092919616,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1810450300,
+					"user_ns": 1671875000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6104036992,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1819193300,
+					"user_ns": 1703125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6109410131,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1830343900,
+					"user_ns": 1625000000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6096917011,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1822606000,
+					"user_ns": 1734375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6105463720,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1806643800,
+					"user_ns": 1718750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6101046962,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1841587000,
+					"user_ns": 1687500000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6115734429,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1793744400,
+					"user_ns": 1734375000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6091404385,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1794079100,
+					"user_ns": 1703125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6093009878,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813259600,
+					"user_ns": 1703125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6092027132,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1797364300,
+					"user_ns": 1625000000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6098774028,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1828032100,
+					"user_ns": 1718750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6101260570,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1801631000,
+					"user_ns": 1671875000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6091016113,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1785227300,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6079244533,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1790700100,
+					"user_ns": 1750000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6091743469,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1789784300,
+					"user_ns": 1703125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6086672874,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1787735600,
+					"user_ns": 1750000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6083653431,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1793878400,
+					"user_ns": 1718750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6094907192,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1810103900,
+					"user_ns": 1687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6085816687,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1810586300,
+					"user_ns": 1765625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6085297825,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1827693200,
+					"user_ns": 1718750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6087797749,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1792737300,
+					"user_ns": 1734375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6078350046,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1790523100,
+					"user_ns": 1796875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6097248231,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1797277800,
+					"user_ns": 1765625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6085687818,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fasta",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "e2e3555b507ef6597465083ae4806556272d1abcd9502cef5fb59fcb1d2b27ab",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "3fcf4f78104c8a65ef210fe1d469f4e473456c791225f2f1f9114f4986aa09fa",
+			"samples": [
+				{
+					"wall_ns": 1790596300,
+					"user_ns": 1734375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6095236339,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1792768500,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6102751480,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1786903800,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6081744809,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1791185700,
+					"user_ns": 1765625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6101165869,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1804725800,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6101297485,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1801306900,
+					"user_ns": 1750000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6087159250,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1815440600,
+					"user_ns": 1703125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6112103429,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1805253800,
+					"user_ns": 1734375000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6108427451,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1802622100,
+					"user_ns": 1687500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6109839086,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1819085600,
+					"user_ns": 1656250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6101445127,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1835957900,
+					"user_ns": 1640625000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6121383000,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1804070500,
+					"user_ns": 1703125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6105694749,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1816393100,
+					"user_ns": 1703125000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6106654427,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1799662500,
+					"user_ns": 1671875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6110929700,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1814662900,
+					"user_ns": 1750000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6115707738,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1821074700,
+					"user_ns": 1687500000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6104038085,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1798042000,
+					"user_ns": 1734375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6102371442,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1794799500,
+					"user_ns": 1718750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6097473071,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1814181000,
+					"user_ns": 1687500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6103245378,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1799880700,
+					"user_ns": 1562500000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6097345959,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1804267400,
+					"user_ns": 1765625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6106686629,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1797671200,
+					"user_ns": 1750000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6098343650,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1797017500,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6098625623,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1790834400,
+					"user_ns": 1765625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6081847956,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1806747000,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6098998889,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1791136400,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6087324690,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1828176600,
+					"user_ns": 1718750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6104587316,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1805755400,
+					"user_ns": 1796875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6118396658,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1800933500,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6102883808,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1788796500,
+					"user_ns": 1781250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6086258281,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fasta",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "e728a81b70f8238b2bc7ac03a1cf19af1e0157136f94e3dbb5c1f71beca30414",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-cpp-clang.exe"
+			],
+			"output_sha256": "3fcf4f78104c8a65ef210fe1d469f4e473456c791225f2f1f9114f4986aa09fa",
+			"samples": [
+				{
+					"wall_ns": 1815448400,
+					"user_ns": 1781250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6179961063,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1816752900,
+					"user_ns": 1796875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6188479750,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813681700,
+					"user_ns": 1781250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6176331800,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813874000,
+					"user_ns": 1796875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6179243606,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1814667100,
+					"user_ns": 1781250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6174759880,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1831314400,
+					"user_ns": 1703125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6185763098,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1832164600,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6183916022,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1844619000,
+					"user_ns": 1671875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6183895883,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1821887300,
+					"user_ns": 1734375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6180949844,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1821663600,
+					"user_ns": 1656250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6182644850,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1842864800,
+					"user_ns": 1750000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6192783668,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1818085000,
+					"user_ns": 1656250000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6172579163,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1822514000,
+					"user_ns": 1718750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6181122213,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820405700,
+					"user_ns": 1765625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6178092458,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1818905100,
+					"user_ns": 1656250000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6176755318,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1862329000,
+					"user_ns": 1656250000,
+					"system_ns": 203125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6191256860,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1819843100,
+					"user_ns": 1750000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6181601349,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1842315300,
+					"user_ns": 1750000000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6188026849,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1826498700,
+					"user_ns": 1656250000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6183708938,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1816479200,
+					"user_ns": 1812500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6181674156,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1815103900,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6179775473,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1818434500,
+					"user_ns": 1796875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6178784216,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813373700,
+					"user_ns": 1796875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6175623570,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1819925400,
+					"user_ns": 1781250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6173205050,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1829262000,
+					"user_ns": 1671875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6177314484,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1853460900,
+					"user_ns": 1796875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6192118200,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1845988400,
+					"user_ns": 1781250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6188130740,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1882209200,
+					"user_ns": 1765625000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6197255823,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1824885900,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6195206345,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820928600,
+					"user_ns": 1812500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6184565786,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "fasta",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "e728a81b70f8238b2bc7ac03a1cf19af1e0157136f94e3dbb5c1f71beca30414",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\fasta-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "3fcf4f78104c8a65ef210fe1d469f4e473456c791225f2f1f9114f4986aa09fa",
+			"samples": [
+				{
+					"wall_ns": 1811027500,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6168757183,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1811569500,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6169459233,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813276700,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6172535759,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1810293400,
+					"user_ns": 1750000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6165854276,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1839221000,
+					"user_ns": 1765625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6172638995,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1824464900,
+					"user_ns": 1781250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6167758744,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820200700,
+					"user_ns": 1781250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6176973376,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1825048300,
+					"user_ns": 1750000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6174631081,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1825738100,
+					"user_ns": 1765625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3784704,
+					"reference_cycles": 6173843243,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1824980100,
+					"user_ns": 1718750000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6168014130,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1850031100,
+					"user_ns": 1796875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6174565736,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820695000,
+					"user_ns": 1671875000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6173784065,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1835614100,
+					"user_ns": 1734375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6173310600,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1825687900,
+					"user_ns": 1671875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6168510742,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820587300,
+					"user_ns": 1625000000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6167529080,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1841694000,
+					"user_ns": 1640625000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6175300927,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1816787800,
+					"user_ns": 1671875000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6170718730,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1816924800,
+					"user_ns": 1687500000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6172409703,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1857000800,
+					"user_ns": 1734375000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6185664639,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1820237400,
+					"user_ns": 1703125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6169817408,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1814652800,
+					"user_ns": 1796875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6176798705,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1821474300,
+					"user_ns": 1765625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6171011325,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1813647100,
+					"user_ns": 1796875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3772416,
+					"reference_cycles": 6174113168,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1822218600,
+					"user_ns": 1828125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6173162648,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1821873400,
+					"user_ns": 1578125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6171283068,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1837653000,
+					"user_ns": 1828125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6208325664,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1858936400,
+					"user_ns": 1796875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3780608,
+					"reference_cycles": 6172204537,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1810007300,
+					"user_ns": 1765625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6162642413,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1837862100,
+					"user_ns": 1828125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6188035723,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1822717900,
+					"user_ns": 1796875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3776512,
+					"reference_cycles": 6181225045,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "mandelbrot",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "30f3bcda8433115a9a5f6a79134d7c16d6302e230fe5a52b3c736976df556e43",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-c-clang.exe"
+			],
+			"output_sha256": "1785fabcd1a79cb85341deb2daf4058b3f29e60f2f5cf6c73be7d32b647214b7",
+			"samples": [
+				{
+					"wall_ns": 2305103800,
+					"user_ns": 2265625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7854416338,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2309559100,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7862796587,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2305076600,
+					"user_ns": 2296875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11341824,
+					"reference_cycles": 7853035461,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2304729500,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7853998286,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2339127900,
+					"user_ns": 2296875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7856008120,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2325228300,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7858113553,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2305743000,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7862418571,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2321764500,
+					"user_ns": 2156250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7862826273,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2313603400,
+					"user_ns": 2187500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11345920,
+					"reference_cycles": 7857652179,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2338092400,
+					"user_ns": 2156250000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7865862271,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2312846900,
+					"user_ns": 2203125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11341824,
+					"reference_cycles": 7859128082,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2311359600,
+					"user_ns": 2187500000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7858001541,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2327566900,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7862379005,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2310981500,
+					"user_ns": 2062500000,
+					"system_ns": 250000000,
+					"peak_memory_bytes": 11362304,
+					"reference_cycles": 7855737701,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2310649500,
+					"user_ns": 2156250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7857222573,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2355174000,
+					"user_ns": 2265625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7867052299,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2337634900,
+					"user_ns": 2203125000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 11362304,
+					"reference_cycles": 7863894134,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2321763000,
+					"user_ns": 2156250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11345920,
+					"reference_cycles": 7859951851,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2320911700,
+					"user_ns": 2171875000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11345920,
+					"reference_cycles": 7861815227,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2306304200,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7854367790,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2315394100,
+					"user_ns": 2250000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7853442185,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2309125100,
+					"user_ns": 2281250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7856254859,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2306944000,
+					"user_ns": 2265625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11350016,
+					"reference_cycles": 7855850547,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2305422700,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7850325336,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2315319000,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7857125454,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2343558500,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11341824,
+					"reference_cycles": 7863318520,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2337825900,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7867399931,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2352192100,
+					"user_ns": 2250000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7863375267,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2311427800,
+					"user_ns": 2265625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7855225739,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2314262400,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7865506687,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "mandelbrot",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "30f3bcda8433115a9a5f6a79134d7c16d6302e230fe5a52b3c736976df556e43",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "1785fabcd1a79cb85341deb2daf4058b3f29e60f2f5cf6c73be7d32b647214b7",
+			"samples": [
+				{
+					"wall_ns": 2306153500,
+					"user_ns": 2234375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7854914644,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2305708300,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11345920,
+					"reference_cycles": 7855854328,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2305844400,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7851622469,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2307419100,
+					"user_ns": 2296875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11350016,
+					"reference_cycles": 7860942623,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2336237700,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11350016,
+					"reference_cycles": 7863575194,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2313003700,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11362304,
+					"reference_cycles": 7859060056,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2320557300,
+					"user_ns": 2187500000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7859524903,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2329453200,
+					"user_ns": 2234375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7860954538,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2324140300,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7861210594,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2338859300,
+					"user_ns": 2203125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7863572125,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2313894900,
+					"user_ns": 2218750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7856409014,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2312254300,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11354112,
+					"reference_cycles": 7857591006,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2326102900,
+					"user_ns": 2218750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7862068909,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2329405000,
+					"user_ns": 2171875000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7866244310,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2310078400,
+					"user_ns": 2187500000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7856601490,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2350770300,
+					"user_ns": 2156250000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11337728,
+					"reference_cycles": 7865388499,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2355940300,
+					"user_ns": 2203125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 11362304,
+					"reference_cycles": 7859108940,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2342854500,
+					"user_ns": 2125000000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7862523147,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2331672500,
+					"user_ns": 2140625000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7860199206,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2311544100,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7857930754,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2303800600,
+					"user_ns": 2265625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11341824,
+					"reference_cycles": 7848849121,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2312618700,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11350016,
+					"reference_cycles": 7852431893,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2308344100,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11350016,
+					"reference_cycles": 7855326907,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2319439800,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7863326363,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2306336500,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7855586340,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2321959900,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11333632,
+					"reference_cycles": 7859480089,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2321197200,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11358208,
+					"reference_cycles": 7859351953,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2316404100,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11345920,
+					"reference_cycles": 7851627878,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2306932400,
+					"user_ns": 2265625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11329536,
+					"reference_cycles": 7856949090,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2314215800,
+					"user_ns": 2296875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11354112,
+					"reference_cycles": 7864979006,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "mandelbrot",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "6ee386fa5a4828b9070793e3d8a545b1a4027ab7650b448b15da1c3d9eb9f398",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-cpp-clang.exe"
+			],
+			"output_sha256": "1785fabcd1a79cb85341deb2daf4058b3f29e60f2f5cf6c73be7d32b647214b7",
+			"samples": [
+				{
+					"wall_ns": 2333632500,
+					"user_ns": 2281250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7948924705,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2324051300,
+					"user_ns": 2312500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7918769079,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2326875800,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7925145021,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2335685100,
+					"user_ns": 2312500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7956686968,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2328906700,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7926656107,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2344516400,
+					"user_ns": 2328125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7950664134,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2343626400,
+					"user_ns": 2343750000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7937736617,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2344625000,
+					"user_ns": 2250000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7924416308,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2344146700,
+					"user_ns": 2062500000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7920918018,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2360450700,
+					"user_ns": 2078125000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7901204643,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2324135600,
+					"user_ns": 2218750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7899303254,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2335909300,
+					"user_ns": 2250000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7930468582,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2354085600,
+					"user_ns": 2125000000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7921302580,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2324929600,
+					"user_ns": 2171875000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7900508827,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2322865200,
+					"user_ns": 2156250000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 11427840,
+					"reference_cycles": 7895140787,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2345269200,
+					"user_ns": 2156250000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 11427840,
+					"reference_cycles": 7914041230,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2335249700,
+					"user_ns": 2250000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7918717817,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2390030900,
+					"user_ns": 2171875000,
+					"system_ns": 187500000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7909925311,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2382261700,
+					"user_ns": 2062500000,
+					"system_ns": 281250000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7945539197,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2323295400,
+					"user_ns": 2312500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7911348275,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2334847100,
+					"user_ns": 2296875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7943677721,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2336110700,
+					"user_ns": 2296875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7927500360,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2334754000,
+					"user_ns": 2312500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7944918456,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2330766200,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11427840,
+					"reference_cycles": 7924481271,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2331928400,
+					"user_ns": 2328125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7922014156,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2333269500,
+					"user_ns": 2265625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7925939318,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2372294300,
+					"user_ns": 2281250000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11427840,
+					"reference_cycles": 7937022249,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2371329600,
+					"user_ns": 2359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7981250163,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2337160000,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7930608384,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2334488900,
+					"user_ns": 2281250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7940709894,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "mandelbrot",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "6ee386fa5a4828b9070793e3d8a545b1a4027ab7650b448b15da1c3d9eb9f398",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\mandelbrot-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "1785fabcd1a79cb85341deb2daf4058b3f29e60f2f5cf6c73be7d32b647214b7",
+			"samples": [
+				{
+					"wall_ns": 2306825100,
+					"user_ns": 2250000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7855231891,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2307788500,
+					"user_ns": 2234375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7860931717,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2308331100,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7858113891,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2307246800,
+					"user_ns": 2234375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7855349116,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2349968700,
+					"user_ns": 2281250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7867812786,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2334092000,
+					"user_ns": 2234375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7864008953,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2308545300,
+					"user_ns": 2265625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11415552,
+					"reference_cycles": 7859272005,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2327803700,
+					"user_ns": 2140625000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7867681242,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2329889500,
+					"user_ns": 2218750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7862643747,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2322393900,
+					"user_ns": 2156250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7864767427,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2316153100,
+					"user_ns": 2234375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7859328736,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2311686500,
+					"user_ns": 2140625000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7855947272,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2319708900,
+					"user_ns": 2187500000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 11415552,
+					"reference_cycles": 7859992194,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2315263700,
+					"user_ns": 2203125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7858839261,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2315372200,
+					"user_ns": 2218750000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7858745254,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2356894700,
+					"user_ns": 2218750000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7870634137,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2321521400,
+					"user_ns": 2203125000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7862360861,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2313835300,
+					"user_ns": 2156250000,
+					"system_ns": 156250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7863731412,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2335991200,
+					"user_ns": 2156250000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7867060847,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2312626300,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7860274807,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2312340200,
+					"user_ns": 2312500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7861089347,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2317058100,
+					"user_ns": 2234375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7868375141,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2308452300,
+					"user_ns": 2281250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11423744,
+					"reference_cycles": 7858713463,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2318672100,
+					"user_ns": 2265625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7864009303,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2313294800,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7850152062,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2353892700,
+					"user_ns": 2296875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7867929816,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2358932400,
+					"user_ns": 2265625000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 11415552,
+					"reference_cycles": 7870349304,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2331876400,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7857308360,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2318378000,
+					"user_ns": 2296875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7863605216,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 2322673100,
+					"user_ns": 2296875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 11419648,
+					"reference_cycles": 7864400303,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "n-body",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "35fa65c0b4d14cc2bd141fb43b66c629ae8d0a741bfc0e9380c2ecc0ec2f1723",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-c-clang.exe"
+			],
+			"output_sha256": "3e6c9ef9d26cfe312a4cd8e1b81b3f671b88fbce84de543e8c23c206a942504d",
+			"samples": [
+				{
+					"wall_ns": 1375045100,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4680824533,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373312100,
+					"user_ns": 1343750000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4675103477,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373717900,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4679010253,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1375222200,
+					"user_ns": 1359375000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4679531159,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1387732700,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681830761,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1383605700,
+					"user_ns": 1328125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4679931777,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1381840200,
+					"user_ns": 1328125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4677100650,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1388991900,
+					"user_ns": 1265625000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681231611,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1390446200,
+					"user_ns": 1281250000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4680638266,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1390965000,
+					"user_ns": 1265625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 4678385790,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1378934500,
+					"user_ns": 1296875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4675510538,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1376961100,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4678600169,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1380530700,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676571193,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1376593600,
+					"user_ns": 1296875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676431352,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1378455200,
+					"user_ns": 1312500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4678885895,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1441337600,
+					"user_ns": 1281250000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4802940145,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1375669200,
+					"user_ns": 1312500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676002070,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1388354100,
+					"user_ns": 1203125000,
+					"system_ns": 171875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4677041835,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1388222300,
+					"user_ns": 1296875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 4680621530,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1378727600,
+					"user_ns": 1250000000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676287521,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1417673000,
+					"user_ns": 1343750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4796177247,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1379062900,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4675318805,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1408197300,
+					"user_ns": 1406250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4794708875,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1382727200,
+					"user_ns": 1312500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4680592806,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1415002400,
+					"user_ns": 1312500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4796807544,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1395614000,
+					"user_ns": 1390625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4678376940,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1387509600,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4679530826,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1431367100,
+					"user_ns": 1390625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4800504462,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1381855300,
+					"user_ns": 1312500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4678917615,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1374381400,
+					"user_ns": 1328125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4674596255,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "n-body",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "35fa65c0b4d14cc2bd141fb43b66c629ae8d0a741bfc0e9380c2ecc0ec2f1723",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "3e6c9ef9d26cfe312a4cd8e1b81b3f671b88fbce84de543e8c23c206a942504d",
+			"samples": [
+				{
+					"wall_ns": 1373200400,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 4676530149,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373437900,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4675399146,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373359700,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4673390382,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1391471300,
+					"user_ns": 1343750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4681875597,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1427668500,
+					"user_ns": 1343750000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4686554470,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1418548900,
+					"user_ns": 1375000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4797400887,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1385449300,
+					"user_ns": 1343750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676502135,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1387495700,
+					"user_ns": 1171875000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681491709,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1388010900,
+					"user_ns": 1203125000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681071346,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1404879400,
+					"user_ns": 1312500000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4683927087,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1385774800,
+					"user_ns": 1234375000,
+					"system_ns": 140625000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4681370021,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1378490800,
+					"user_ns": 1296875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3833856,
+					"reference_cycles": 4676466662,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1379996300,
+					"user_ns": 1296875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4680075307,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1389039600,
+					"user_ns": 1343750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681956930,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1376916500,
+					"user_ns": 1343750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4679006839,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1410671600,
+					"user_ns": 1265625000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 4684168343,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1380075900,
+					"user_ns": 1265625000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4679090220,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1403336700,
+					"user_ns": 1281250000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4681554648,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1410146200,
+					"user_ns": 1281250000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4680800251,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373437600,
+					"user_ns": 1312500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4675036495,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1373487500,
+					"user_ns": 1328125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4673913704,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1417515300,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4797176334,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1375748600,
+					"user_ns": 1343750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676444373,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1375603700,
+					"user_ns": 1343750000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4678531080,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1395774100,
+					"user_ns": 1343750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4690043589,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1376808500,
+					"user_ns": 1359375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4678587459,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1404199400,
+					"user_ns": 1375000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4683343624,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1388023300,
+					"user_ns": 1359375000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4676801549,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1409836600,
+					"user_ns": 1390625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 4795276286,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1410832600,
+					"user_ns": 1375000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3829760,
+					"reference_cycles": 4795633810,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "n-body",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "2b48beaed8676c1471db89e6e6675bc7180c4e4127793efd808eba2e31715280",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-cpp-clang.exe"
+			],
+			"output_sha256": "3e6c9ef9d26cfe312a4cd8e1b81b3f671b88fbce84de543e8c23c206a942504d",
+			"samples": [
+				{
+					"wall_ns": 1236234600,
+					"user_ns": 1187500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4207259603,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1236201400,
+					"user_ns": 1218750000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4208318172,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1234658900,
+					"user_ns": 1234375000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4200738074,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1251353100,
+					"user_ns": 1234375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4202747168,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1277327600,
+					"user_ns": 1156250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4212629979,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1252699300,
+					"user_ns": 1187500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4204925427,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1241850900,
+					"user_ns": 1218750000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4208611411,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1245217200,
+					"user_ns": 1140625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3891200,
+					"reference_cycles": 4209492949,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1247681500,
+					"user_ns": 1187500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4203340892,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1248538500,
+					"user_ns": 1203125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4210865317,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1252027300,
+					"user_ns": 1156250000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4211590907,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1240745600,
+					"user_ns": 1156250000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4208653059,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1242935800,
+					"user_ns": 1171875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4202656960,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1243010700,
+					"user_ns": 1187500000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4209340139,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1239293000,
+					"user_ns": 1125000000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4208690377,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1266304900,
+					"user_ns": 1140625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4209503173,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1238116300,
+					"user_ns": 1171875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4203427324,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1269098000,
+					"user_ns": 1156250000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4207359388,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1244391300,
+					"user_ns": 1125000000,
+					"system_ns": 125000000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4202798448,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1237527200,
+					"user_ns": 1203125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4207493059,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1243721500,
+					"user_ns": 1218750000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3903488,
+					"reference_cycles": 4207303015,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1238847600,
+					"user_ns": 1187500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4208068308,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1234337600,
+					"user_ns": 1234375000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3903488,
+					"reference_cycles": 4201497195,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1241034500,
+					"user_ns": 1234375000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4207519050,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1242335600,
+					"user_ns": 1203125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4208581716,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1260861900,
+					"user_ns": 1203125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4205772762,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1245802500,
+					"user_ns": 1203125000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4209288891,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1256097100,
+					"user_ns": 1171875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4223135551,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1236191400,
+					"user_ns": 1218750000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4206318983,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1239937300,
+					"user_ns": 1234375000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4207213785,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "n-body",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "2b48beaed8676c1471db89e6e6675bc7180c4e4127793efd808eba2e31715280",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\n-body-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "3e6c9ef9d26cfe312a4cd8e1b81b3f671b88fbce84de543e8c23c206a942504d",
+			"samples": [
+				{
+					"wall_ns": 1204861600,
+					"user_ns": 1203125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103192789,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1204546600,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4099919364,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1205399300,
+					"user_ns": 1203125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103473751,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1205095600,
+					"user_ns": 1171875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103774863,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1245611100,
+					"user_ns": 1171875000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4112379331,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1227950900,
+					"user_ns": 1187500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4110459120,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1221505300,
+					"user_ns": 1109375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103867158,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1219805300,
+					"user_ns": 1109375000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4105670565,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1211565100,
+					"user_ns": 1140625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4106218106,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1209357100,
+					"user_ns": 1156250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104420850,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1234591300,
+					"user_ns": 1171875000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4109183851,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1208871500,
+					"user_ns": 1125000000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4105862586,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1218994200,
+					"user_ns": 1156250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4105570351,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1209263300,
+					"user_ns": 1109375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104502581,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1217759700,
+					"user_ns": 1109375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4107276934,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1226418300,
+					"user_ns": 1109375000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4109411512,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1216706700,
+					"user_ns": 1156250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104544275,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1209558300,
+					"user_ns": 1109375000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104449924,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1227562900,
+					"user_ns": 1093750000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4106606023,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1210141200,
+					"user_ns": 1203125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4101635539,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1214200200,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4104415070,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1207457200,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103511668,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1205924200,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103788548,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1209432000,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103812835,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1208223700,
+					"user_ns": 1171875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104343281,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1223286000,
+					"user_ns": 1203125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 4103425237,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1246776200,
+					"user_ns": 1187500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4107208608,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1214735700,
+					"user_ns": 1171875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4104342246,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1212571400,
+					"user_ns": 1171875000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3903488,
+					"reference_cycles": 4104449255,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 1212134000,
+					"user_ns": 1156250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 4103902017,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "spectral-norm",
+			"name": "c-clang",
+			"variant": "c-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "c060990ab6d8cc2514c47ba09066da0e5d114faee10fad6e79ebf2de93ea2664",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-c-clang.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-c-clang.exe"
+			],
+			"output_sha256": "f9d5b5e3eb7657cf1bbba4cc856651864df9cd9fd9a6be9b9bc5fcbb67150deb",
+			"samples": [
+				{
+					"wall_ns": 656593300,
+					"user_ns": 578125000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233277447,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657219300,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233897479,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656670000,
+					"user_ns": 640625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2232097227,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656642800,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233288383,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658253800,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233823290,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 664343000,
+					"user_ns": 640625000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234751632,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 660175400,
+					"user_ns": 609375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234392404,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 661345700,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233694444,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 664405100,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3813376,
+					"reference_cycles": 2234249542,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658465400,
+					"user_ns": 625000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233640377,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 669532900,
+					"user_ns": 625000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2235810496,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 666029400,
+					"user_ns": 515625000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234194198,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 665126800,
+					"user_ns": 625000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233882752,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658310600,
+					"user_ns": 578125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233728994,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658912300,
+					"user_ns": 609375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2232972589,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 670883300,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2236524536,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 659677700,
+					"user_ns": 640625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2233308886,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 673511600,
+					"user_ns": 625000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2235882312,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 660958700,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233902574,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 659602300,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2233926879,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657732500,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2232877537,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657691100,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234037616,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658476000,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2233165322,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658493100,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234665487,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 664482400,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2240137730,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 661350300,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233514997,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 665169700,
+					"user_ns": 656250000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234585861,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 670614300,
+					"user_ns": 609375000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3813376,
+					"reference_cycles": 2232769184,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656631600,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2233004693,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 660450700,
+					"user_ns": 593750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2234145286,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "spectral-norm",
+			"name": "c-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "c-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "c060990ab6d8cc2514c47ba09066da0e5d114faee10fad6e79ebf2de93ea2664",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang.exe",
+				"-std=c17",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-c-clang-fno-wrapv-fstrict-aliasing.c",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-c-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "f9d5b5e3eb7657cf1bbba4cc856651864df9cd9fd9a6be9b9bc5fcbb67150deb",
+			"samples": [
+				{
+					"wall_ns": 706324200,
+					"user_ns": 718750000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2401039718,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 705937200,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2400320221,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 705442000,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2399692012,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 706072200,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400851064,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 714838000,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2401932850,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 728168300,
+					"user_ns": 703125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2404178132,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 709568000,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2401071202,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 716142900,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2403162326,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 712530500,
+					"user_ns": 687500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2401766741,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 722164600,
+					"user_ns": 656250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2404531566,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707772000,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400376615,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 710987400,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400773817,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 715994800,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2402768881,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707345900,
+					"user_ns": 609375000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3825664,
+					"reference_cycles": 2401273208,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707601100,
+					"user_ns": 640625000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2401064679,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 723643600,
+					"user_ns": 703125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2403796664,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 709237700,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2401407838,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 727514700,
+					"user_ns": 640625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2402437355,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 721350500,
+					"user_ns": 656250000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2403954967,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 710687600,
+					"user_ns": 687500000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400718775,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 710613300,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400469965,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707555100,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400736893,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 706431600,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400819268,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 712249000,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2400800801,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708565900,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2401223594,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 718889200,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2403493498,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 725263500,
+					"user_ns": 703125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2403693446,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 723634600,
+					"user_ns": 687500000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2405310544,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 715054600,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3817472,
+					"reference_cycles": 2402816739,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708644100,
+					"user_ns": 640625000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3821568,
+					"reference_cycles": 2401057160,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "spectral-norm",
+			"name": "cpp-clang",
+			"variant": "cpp-clang",
+			"flags": [],
+			"patches": [],
+			"source_sha256": "98a3858b14f5a3ad6330c333f48484d10199923a38350ad67c65a54649d59cae",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-cpp-clang.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-cpp-clang.exe"
+			],
+			"output_sha256": "f9d5b5e3eb7657cf1bbba4cc856651864df9cd9fd9a6be9b9bc5fcbb67150deb",
+			"samples": [
+				{
+					"wall_ns": 655997100,
+					"user_ns": 640625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230436076,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656398200,
+					"user_ns": 625000000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230988406,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656530800,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2230020773,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 655850000,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230728981,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 663475500,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2231699004,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 662641200,
+					"user_ns": 671875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230743368,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 661244700,
+					"user_ns": 593750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230673957,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 667235300,
+					"user_ns": 625000000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230448707,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 666552200,
+					"user_ns": 671875000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2231015724,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657391400,
+					"user_ns": 578125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2229677626,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 668885000,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2231905449,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657691300,
+					"user_ns": 578125000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3903488,
+					"reference_cycles": 2230127726,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 660866000,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2230999688,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657675900,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2229590443,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656834700,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2229177578,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 662032800,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230813741,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 666585300,
+					"user_ns": 640625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230671912,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 679683600,
+					"user_ns": 625000000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2233058037,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 659672500,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230281885,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 656380000,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2230610057,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 655798500,
+					"user_ns": 640625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2229697777,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 659145100,
+					"user_ns": 640625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230956299,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657672700,
+					"user_ns": 656250000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230575893,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 660003500,
+					"user_ns": 640625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230841101,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 661839800,
+					"user_ns": 640625000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230647648,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 665329300,
+					"user_ns": 609375000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2231002119,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 673473300,
+					"user_ns": 640625000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2229973274,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 668915700,
+					"user_ns": 609375000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2231013371,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 657461900,
+					"user_ns": 625000000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2229589099,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 658031500,
+					"user_ns": 593750000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2230195439,
+					"exit_code": 0
+				}
+			]
+		},
+		{
+			"benchmark": "spectral-norm",
+			"name": "cpp-clang -fno-wrapv -fstrict-aliasing",
+			"variant": "cpp-clang",
+			"flags": [
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"patches": [],
+			"source_sha256": "98a3858b14f5a3ad6330c333f48484d10199923a38350ad67c65a54649d59cae",
+			"command": [
+				".\\.toolchains\\llvm-23.1.3\\bin\\clang++.exe",
+				"-std=c++23",
+				"-O3",
+				"-march=native",
+				"-flto",
+				"-ffp-contract=off",
+				"-fuse-ld=lld",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-cpp-clang-fno-wrapv-fstrict-aliasing.cpp",
+				"-o",
+				".\\bench\\build\\experiments\\clang-msvc\\spectral-norm-cpp-clang-fno-wrapv-fstrict-aliasing.exe",
+				"-fno-wrapv",
+				"-fstrict-aliasing"
+			],
+			"output_sha256": "f9d5b5e3eb7657cf1bbba4cc856651864df9cd9fd9a6be9b9bc5fcbb67150deb",
+			"samples": [
+				{
+					"wall_ns": 706898400,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2400855496,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 705158900,
+					"user_ns": 656250000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2400258712,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 705862400,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2400463107,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 715427500,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2402215177,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 718591200,
+					"user_ns": 718750000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2403795314,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 713654200,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2402176211,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 716150000,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2403395073,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 712434200,
+					"user_ns": 625000000,
+					"system_ns": 62500000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2402260292,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708610400,
+					"user_ns": 656250000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2404278260,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 716644000,
+					"user_ns": 671875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2403565962,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 714986100,
+					"user_ns": 703125000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2403556708,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 709615600,
+					"user_ns": 640625000,
+					"system_ns": 78125000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401798221,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 710985500,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2401583199,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708093500,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2401485797,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707488000,
+					"user_ns": 640625000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401291952,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 723923400,
+					"user_ns": 625000000,
+					"system_ns": 109375000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2405392193,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708121500,
+					"user_ns": 625000000,
+					"system_ns": 93750000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401231816,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 718519600,
+					"user_ns": 671875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2402293470,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 711885800,
+					"user_ns": 671875000,
+					"system_ns": 46875000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2402258234,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 706198000,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401206848,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 713214900,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401776329,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 707871800,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2402305070,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 706733900,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3891200,
+					"reference_cycles": 2401015120,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 712335300,
+					"user_ns": 703125000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401507979,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 706860100,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2400793286,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 709637900,
+					"user_ns": 687500000,
+					"system_ns": 15625000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401030521,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 723190700,
+					"user_ns": 687500000,
+					"system_ns": 0,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2424083886,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708158200,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2402222041,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 714009500,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3899392,
+					"reference_cycles": 2402245593,
+					"exit_code": 0
+				},
+				{
+					"wall_ns": 708694300,
+					"user_ns": 671875000,
+					"system_ns": 31250000,
+					"peak_memory_bytes": 3895296,
+					"reference_cycles": 2401147050,
+					"exit_code": 0
+				}
+			]
+		}
+	]
+}
