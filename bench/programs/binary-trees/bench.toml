@@ -2,3 +2,4 @@
 validate_args = ["10"]
 validate_output = "expected-10.txt"
 time_args = ["19"]
+time_output_sha256 = "0bba728e95e9f2076c758d2e6f3c91307eb7824601efddf970311f913d899256"

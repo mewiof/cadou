@@ -2,3 +2,4 @@
 validate_args = ["1000"]
 validate_output = "expected-1000.txt"
 time_args = ["25000000"]
+time_output_sha256 = "3fcf4f78104c8a65ef210fe1d469f4e473456c791225f2f1f9114f4986aa09fa"

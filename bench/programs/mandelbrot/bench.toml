@@ -2,3 +2,4 @@
 validate_args = ["200"]
 validate_output = "expected-200.pbm"
 time_args = ["8000"]
+time_output_sha256 = "1785fabcd1a79cb85341deb2daf4058b3f29e60f2f5cf6c73be7d32b647214b7"
