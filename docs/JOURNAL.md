@@ -2,6 +2,68 @@
 
 Newest entry first.
 
+## 2026-10-11 (second session)
+
+Session 2 explained the open baseline gaps and ran four experiments. It also added three benchmarks and started phase 2 on paper.
+
+### Done
+
+- CI passed on its first run after the push (checks + benchmark builds and validation on ubuntu-24.04 and ubuntu-24.04-arm). The worry about clang 18 and `<print>` in the first entry did not come true.
+- [baseline-gaps.md](research/baseline-gaps.md) explains the n-body/fannkuch-redux/fasta gaps with 36 builds that change one thing each.
+- fasta writes through a 64 KiB buffer in every language.
+- Experiments: loops a run-time check cannot rescue ([noalias2.md](research/noalias2.md))/index types ([index-type.md](research/index-type.md))/clang's Windows defaults ([clang-msvc.md](research/clang-msvc.md)).
+- k-nucleotide/hash-map/sort. The harness feeds generated input on stdin and pins khash for C. `bench/harness/experiment.py` holds what one-change experiments share.
+- Second Windows baseline in the [report](../bench/results/2026-10-11-i7-14700kf-windows-2/report.md).
+- [spec/core.md](../spec/core.md) is the first draft of the core semantics. [ADR 0004](decisions/0004-reference-interpreter.md) plans the reference interpreter.
+
+### Baseline
+
+Median time over the fastest variant from 30 runs each pinned to a P-core ([report](../bench/results/2026-10-11-i7-14700kf-windows-2/report.md)). fasta runs with the 64 KiB buffer everywhere. The geometric means cover nine benchmarks and do not compare with the first baseline's six.
+
+| benchmark | c-clang | c-gcc | cpp-clang | cpp-gcc | rust | zig |
+| --- | --- | --- | --- | --- | --- | --- |
+| binary-trees | 1.69 | 1.67 | 1.88 | 1.70 | 1.72 | **1.00** |
+| fannkuch-redux | 1.16 | **1.00** | 1.54 | 1.30 | 1.17 | 1.49 |
+| fasta | 1.12 | 1.02 | 1.12 | **1.00** | 1.22 | 1.09 |
+| hash-map | 1.07 | **1.00** | 4.25 | 4.08 | 1.45 | 1.03 |
+| k-nucleotide | **1.00** | 1.06 | 1.46 | 1.04 | 1.41 | 1.07 |
+| mandelbrot | **1.00** | 1.05 | 1.01 | 1.05 | 1.06 | 1.05 |
+| n-body | 1.30 | 1.30 | 1.16 | 1.30 | 1.27 | **1.00** |
+| sort | 7.01 | 7.43 | 4.54 | 3.66 | **1.00** | 2.57 |
+| spectral-norm | 1.45 | 1.01 (tie) | 1.45 | **1.00** | 1.66 | 1.97 |
+| geometric mean | 1.46 | 1.38 | 1.75 | 1.53 | 1.31 | 1.28 |
+
+Fastest counts: gcc 4 (2 in C and 2 in C++)/clang 2/zig 2/rust 1. sort alone moves the geometric means a lot.
+
+### Findings
+
+- n-body: no language feature behind it. LLVM's vectorizer packs the unrolled step differently for each IR shape (the index type of one loop moves clang's C++ build by 12%). Zig's lead comes partly from its IR and partly from its own pass setup.
+- fannkuch-redux: library reverse/rotate code carries setup for long ranges and pays for it on 2 to 11 elements.
+- fasta: the UCRT flushed stdout after every `fwrite` because the harness's `NUL` is a character device.
+- A no-alias promise is worth 16 to 18 times where a loop keeps its own bounds in memory it writes through. Around an unknown call LLVM keeps a sum in a register only with noalias + dereferenceable + align on the pointer (Rust's `&mut`). C's `restrict` gives one of the three. Zig reads `x` before it calls `f` in `x += f()` and needs no promise there.
+- 64-bit index arithmetic loses AVX2's native multiply and conversion. The width of an index matters more than its sign.
+- clang's MSVC-target defaults (`-fwrapv` and no type-based alias analysis) cost it nothing overall on this suite.
+- Rust's `sort_unstable` sorts 10 million random integers in 0.14 s. Zig's `std.mem.sortUnstable` needs 0.37 s/`std::sort` 0.52 to 0.65 s/`qsort` 1.0 s. `std::unordered_map` takes 4 times as long as khash on hash-map. Rust's default SipHash costs 45% there (neither analyzed yet).
+
+### Corrections
+
+- The first entry said clang computes spectral-norm one element at a time. clang 23.1.3 vectorizes the loop 4 lanes wide like gcc (gcc's loop is wider). [ADR 0002](decisions/0002-initial-backend.md) carries the correction.
+- The first entry put part of Rust's and Zig's spectral-norm gap on `usize` to `f64`. In vector code the 64-bit product costs more. Zig stays scalar because its LLVM 22.1.8 leaves this loop scalar (clang 22.1.8 through `zig cc` as well).
+
+### Failed or surprising
+
+- The first version of the aliasing experiment measured nothing for clang and rustc. They rewrote each kernel for its only caller (a struct argument arrived as two values). The kernels now get called through pointers.
+- A chain of `add reg, 1` measured 28 GHz. Raptor Cove folds immediate adds at rename. `add reg, reg` gives 5.1 to 5.4 GHz.
+- Zig 0.17.0's `--verbose-llvm-ir` prints `, , !prof` and debug metadata that LLVM 23 rejects. LLVM 23's loop idiom pass then turned a loop in Zig's start code into a `wcslen` call no library provides.
+- Git Bash's `> NUL` creates a regular file. Only Python's `os.devnull` gave the character device the harness uses.
+- The first "no output" fasta variants hashed every byte with FNV. That serial chain cost as much as the output it replaced.
+- llvm-mca misses n-body's step by 12 to 37 cycles. Rust's n-body and clang's slower spectral-norm with standard semantics (a shorter loop that takes 8% longer) stay open until hardware counters exist.
+- Identical Zig code ran 24% slower with `noalias`. Its loop spans two 64-byte lines (placement suspected and not tested).
+
+### Next
+
+- The rest of [ROADMAP.md](ROADMAP.md#next-steps): the reference interpreter (milestones 1 and 2)/the cost of overflow checks/the Linux run/EXPERT versions/more workloads.
+
 ## 2026-10-11
 
 Session 1 covered phase 0 and phase 1 up to a first baseline.

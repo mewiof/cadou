@@ -18,14 +18,17 @@ In progress.
 - [x] benchmark harness with pinned toolchains ([ADR 0003](decisions/0003-benchmark-methodology.md))
 - [x] idiomatic n-body/spectral-norm/fannkuch-redux/mandelbrot/binary-trees/fasta in C/C++/Rust/Zig + `startup`
 - [x] first baseline on Windows 11 with an i7-14700KF ([report](../bench/results/2026-10-11-i7-14700kf-windows/report.md))
+- [x] second baseline with ten benchmarks ([report](../bench/results/2026-10-11-i7-14700kf-windows-2/report.md))
 - [x] CI that builds every program and checks its output on Linux x86-64 and AArch64
 - [x] first experiment on what a no-alias promise buys ([noalias.md](research/noalias.md))
+- [x] the baseline's open gaps explained from the generated code ([baseline-gaps.md](research/baseline-gaps.md))
+- [x] loops a run-time check cannot rescue ([noalias2.md](research/noalias2.md))/index types ([index-type.md](research/index-type.md))/clang's Windows defaults ([clang-msvc.md](research/clang-msvc.md))
 - [ ] Linux reference run with perf counters (WSL2 on the same machine once it is back on)
 - [ ] an AArch64 machine for timing
-- [ ] k-nucleotide with a rule for which hash table each language may use
+- [x] k-nucleotide with a rule for which hash table each language may use
 - [ ] systems workloads:
-	- [ ] hash map insert/lookup
-	- [ ] sorting
+	- [x] hash map insert/lookup
+	- [x] sorting
 	- [ ] memcpy/memset-style kernels
 	- [ ] JSON parsing and string processing
 	- [ ] allocator-heavy work
@@ -41,8 +44,13 @@ In progress.
 
 Semantics first and syntax last.
 
-- [ ] written sketch of the core semantics with example programs (functions/integers/structs/tagged unions/slices/pointers/control flow/modules/C ABI calls)
-- [ ] reference interpreter as the oracle for differential testing
+- [ ] written sketch of the core semantics with example programs (functions/integers/structs/tagged unions/slices/pointers/control flow/modules/C ABI calls). First draft in [spec/core.md](../spec/core.md)
+- [ ] reference interpreter as the oracle for differential testing ([ADR 0004](decisions/0004-reference-interpreter.md))
+	- [ ] integers/booleans/functions/control flow with every arithmetic check
+	- [ ] structs/tagged unions/match
+	- [ ] arrays/slices/pointers/the heap with bounds checks and provenance
+	- [ ] modules
+	- [ ] host functions in place of C calls
 - [ ] bootstrap compiler in Rust ([ADR 0001](decisions/0001-bootstrap-language.md)) that emits LLVM IR ([ADR 0002](decisions/0002-initial-backend.md))
 - [ ] first benchmarks compiled end to end as `cadou` variants with checks on and off
 
@@ -69,8 +77,8 @@ Semantics first and syntax last.
 
 ## Next steps
 
-1. Explain the baseline's largest gaps from the generated code (see the 2026-10-11 journal entry).
-2. Linux run under WSL2 with perf counters as soon as Virtual Machine Platform is back on.
-3. k-nucleotide and the first systems workloads (hash map + sorting).
+1. Reference interpreter milestones 1 and 2 with golden tests ([ADR 0004](decisions/0004-reference-interpreter.md)).
+2. The cost of overflow checks across the suite (Rust with and without `overflow-checks` + C with trapping overflow) as evidence for [spec section 11.4](../spec/core.md#114-overflow-in-unchecked-builds).
+3. Linux run under WSL2 with perf counters as soon as Virtual Machine Platform is back on (Rust's n-body is waiting for counters).
 4. EXPERT n-body and spectral-norm to see how far the idiomatic versions are from the machine.
-5. Start phase 2 with the core semantics on paper and then the reference interpreter.
+5. More systems workloads (memcpy/memset kernels/JSON parsing/an allocator-heavy one/matrix multiply).

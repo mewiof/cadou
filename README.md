@@ -2,7 +2,7 @@
 
 CADOU (a working name) is a research project for a systems programming language. The goal is to beat C/C++/Rust/Zig at run time by a measurable margin while staying memory-safe by default. It is an experiment rather than a product. There is no compiler yet.
 
-Status on 2026-10-11: phase 1. The benchmark harness and six classic benchmarks exist in C/C++/Rust/Zig (measured on one Windows machine so far). In the [first baseline](bench/results/2026-10-11-i7-14700kf-windows/report.md) no competitor wins everywhere (fastest counts out of six: zig 3/gcc 2/clang 1). Phases and next steps live in [docs/ROADMAP.md](docs/ROADMAP.md).
+Status on 2026-10-11: phase 1 is in progress and phase 2 has started on paper. The benchmark harness and nine benchmarks exist in C/C++/Rust/Zig (measured on one Windows machine so far). In the [latest baseline](bench/results/2026-10-11-i7-14700kf-windows-2/report.md) no competitor wins everywhere (fastest counts out of nine: gcc 4/clang 2/zig 2/rust 1). A first draft of the core semantics is in [spec/core.md](spec/core.md). Phases and next steps live in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Priorities
 
