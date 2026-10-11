@@ -10,6 +10,7 @@ Sources behind the survey/ADRs/benchmarks. "read" is the date a source was last 
 | C++ working draft | read 2026-10-11 | https://eel.is/c++draft/ |
 | cppreference pages for C++17/C++23/initialization | read 2026-10-11 | https://en.cppreference.com/w/cpp |
 | The Rust Reference on type layout | read 2026-10-11 | https://doc.rust-lang.org/reference/type-layout.html |
+| The Rust Reference on operator expressions (evaluation order of compound assignment) | read 2026-10-11 | https://doc.rust-lang.org/reference/expressions/operator-expr.html |
 | Rust std docs for `std::sync::Mutex` + `std::range` | 1.99.0 | https://doc.rust-lang.org/stable/std/ |
 | Rust std docs for `std::sync::nonpoison` | 1.101.0-nightly of 2026-10-10 | https://doc.rust-lang.org/nightly/std/sync/nonpoison/ |
 | Rust Edition Guide on Rust 2024 | stable in 1.85.0 (2025-02-20) | https://doc.rust-lang.org/edition-guide/rust-2024/ |
