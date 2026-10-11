@@ -71,6 +71,7 @@ Sources behind the survey/ADRs/benchmarks. "read" is the date a source was last 
 | The Computer Language Benchmarks Game (descriptions + the published outputs used as validation files) | outputs fetched 2026-10-11 | https://benchmarksgame-team.pages.debian.net/benchmarksgame/ |
 | hyperfine README | 2.0.0 (read 2026-10-11) | https://github.com/sharkdp/hyperfine |
 | Cranelift | read 2026-10-11 | https://cranelift.dev/ |
+| Miri README (what Rust's interpreter detects) | read 2026-10-11 | https://github.com/rust-lang/miri |
 | QBE | read 2026-10-11 | https://c9x.me/compile/ |
 | pinned toolchains with checksums | clang 23.1.3/GCC 16.2.0/Rust 1.99.0/Zig 0.17.0 | [bench/toolchains.toml](../bench/toolchains.toml) |
 | uops.info latency and throughput tables (`vdivpd`/`vdivsd` on Alder Lake-P) | read 2026-10-11 | https://uops.info/ |
