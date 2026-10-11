@@ -89,6 +89,9 @@ int main(int argc, char** argv) {
 #ifdef _WIN32
 	_setmode(_fileno(stdout), _O_BINARY);
 #endif
+	// NOTE: the UCRT flushes stdout after every call when stdout is a character
+	// device (NUL e.g.). Every fasta writes through a 64 KiB buffer
+	std::setvbuf(stdout, nullptr, _IOFBF, 1 << 16);
 	std::size_t n = argc > 1 ? std::strtoull(argv[1], nullptr, 10) : 1000;
 	std::array<Acid, 15> iub{{
 		{'a', 0.27}, {'c', 0.12}, {'g', 0.12}, {'t', 0.27},

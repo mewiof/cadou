@@ -92,6 +92,9 @@ int main(int argc, char** argv) {
 #ifdef _WIN32
 	_setmode(_fileno(stdout), _O_BINARY);
 #endif
+	// NOTE: the UCRT flushes stdout after every call when stdout is a character
+	// device (NUL e.g.). Every fasta writes through a 64 KiB buffer
+	setvbuf(stdout, NULL, _IOFBF, 1 << 16);
 	size_t n = argc > 1 ? (size_t)atol(argv[1]) : 1000;
 	unsigned seed = 42;
 	RepeatFasta(">ONE Homo sapiens alu\n", ALU, 2 * n);

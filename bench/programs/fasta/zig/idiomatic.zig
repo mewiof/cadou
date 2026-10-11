@@ -95,7 +95,8 @@ pub fn main(init: std.process.Init) !void {
 		.{ .symbol = 't', .probability = 0.3015094502008 },
 	};
 
-	var buffer: [4096]u8 = undefined;
+	// every fasta writes through a 64 KiB buffer
+	var buffer: [1 << 16]u8 = undefined;
 	var stdout_writer = std.Io.File.stdout().writer(init.io, &buffer);
 	const out = &stdout_writer.interface;
 

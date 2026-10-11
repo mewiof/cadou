@@ -35,6 +35,7 @@ Rules for every language:
 - Single-threaded. The fastest Benchmarks Game entries are mostly parallel but ours measure code generation.
 - binary-trees takes every node from the language's default heap in one order (left subtree -> right subtree -> node).
 - fasta keeps the reference generator exactly (doubles included). Its output depends on every rounding.
+- fasta writes through a 64 KiB output buffer in every language (`setvbuf` in C and C++). Without it the UCRT flushes stdout after every call when stdout is a character device like the harness's `NUL` ([baseline-gaps.md](../docs/research/baseline-gaps.md#fasta)).
 
 ## Results
 

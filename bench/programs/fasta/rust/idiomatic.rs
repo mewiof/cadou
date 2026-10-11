@@ -97,7 +97,8 @@ fn main() -> io::Result<()> {
 		acid(b't', 0.3015094502008),
 	];
 
-	let mut out = BufWriter::new(io::stdout().lock());
+	// every fasta writes through a 64 KiB buffer
+	let mut out = BufWriter::with_capacity(1 << 16, io::stdout().lock());
 	let mut random = Random { seed: 42 };
 	repeat_fasta(&mut out, ">ONE Homo sapiens alu\n", ALU, 2 * n)?;
 	random_fasta(&mut out, ">TWO IUB ambiguity codes\n", &mut iub, 3 * n, &mut random)?;

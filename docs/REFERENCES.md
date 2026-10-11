@@ -21,6 +21,8 @@ Sources behind the survey/ADRs/benchmarks. "read" is the date a source was last 
 | Clang Users Manual (`-ffp-contract`) + Clang Modules | in-progress docs read 2026-10-11 | https://clang.llvm.org/docs/ |
 | GCC manual on optimize options (`-ffp-contract`) | read 2026-10-11 | https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html |
 | LLVM Developer Policy on IR backwards compatibility | read 2026-10-11 | https://llvm.org/docs/DeveloperPolicy.html |
+| Microsoft C runtime docs on stream I/O (stdout flushing on character devices) | updated 2025-05-30 (read 2026-10-11) | https://learn.microsoft.com/en-us/cpp/c-runtime-library/stream-i-o |
+| Microsoft x64 ABI conventions (register volatility) | updated 2026-06-02 (read 2026-10-11) | https://learn.microsoft.com/en-us/cpp/build/x64-software-conventions |
 | Flang "Aliasing in Fortran" (Fortran 2018 15.5.2.13) | read 2026-10-11 | https://flang.llvm.org/docs/Aliasing.html |
 | Odin overview | read 2026-10-11 | https://odin-lang.org/docs/overview/ |
 | Austral specification | read 2026-10-11 | https://austral-lang.org/spec/spec.html |
