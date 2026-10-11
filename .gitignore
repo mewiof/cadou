@@ -1,0 +1,8 @@
+# pinned toolchains (bench/harness/bench.py fetch)
+/.toolchains/
+
+# benchmark builds and scratch output
+/bench/build/
+
+__pycache__/
+*.pyc
