@@ -28,6 +28,13 @@ def pvalue(p):
 	return "<0.001" if p < 0.001 else f"{p:.3f}"
 
 
+def program_input(entry):
+	parts = list(entry["args"])
+	if entry.get("stdin"):
+		parts.append(f"< {' '.join(entry['stdin'])}")
+	return " ".join(parts)
+
+
 def analyze(raw):
 	# per benchmark: summaries + ratio to the fastest + Holm-adjusted p against it
 	by_benchmark = {}
@@ -108,13 +115,13 @@ def render(raw):
 			else:
 				cells.append(f"{row['ratio']:.2f}" + (" tie" if row["p"] >= ALPHA else ""))
 		name = benchmark if category == "idiomatic" else f"{benchmark} ({category})"
-		lines.append(f"| {name} | {' '.join(rows[0]['entry']['args'])} | " + " | ".join(cells) + " |")
+		lines.append(f"| {name} | {program_input(rows[0]['entry'])} | " + " | ".join(cells) + " |")
 	lines.append("| geometric mean | | " + " | ".join(f"{stats.geomean(ratios[v]):.2f}" if ratios[v] else "-" for v in variants) + " |")
 
 	for (benchmark, category), rows in sorted(analyzed.items(), key=lambda item: (item[0][0] == "startup", item[0])):
 		first = rows[0]["entry"]
 		title = benchmark if category == "idiomatic" else f"{benchmark} ({category})"
-		args = " ".join(first["args"]) or "(none)"
+		args = program_input(first) or "(none)"
 		lines += [
 			"",
 			f"## {title}",

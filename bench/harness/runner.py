@@ -96,14 +96,19 @@ def unpin():
 		os.sched_setaffinity(0, range(os.cpu_count()))
 
 
-def run(command, stdout=None, env=None, high_priority=False):
+def run(command, stdout=None, env=None, high_priority=False, stdin=None):
+	# stdin is a file path (None reads from the null device)
 	extra = {}
 	if WINDOWS and high_priority:
 		extra["creationflags"] = subprocess.HIGH_PRIORITY_CLASS
 	merged = dict(os.environ, **env) if env else None
-	with tempfile.TemporaryFile() as stderr, open(os.devnull, "wb") if stdout is None else contextlib.nullcontext(stdout) as out:
+	with (
+		tempfile.TemporaryFile() as stderr,
+		open(os.devnull, "wb") if stdout is None else contextlib.nullcontext(stdout) as out,
+		open(stdin, "rb") if stdin else contextlib.nullcontext(subprocess.DEVNULL) as source,
+	):
 		start = time.perf_counter_ns()
-		process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=out, stderr=stderr, env=merged, **extra)
+		process = subprocess.Popen(command, stdin=source, stdout=out, stderr=stderr, env=merged, **extra)
 		if WINDOWS:
 			process.wait()
 			wall = time.perf_counter_ns() - start
@@ -139,12 +144,12 @@ def perf_available():
 		return False
 
 
-def perf_counters(command, env=None):
+def perf_counters(command, env=None, stdin=None):
 	merged = dict(os.environ, **env) if env else None
-	with tempfile.TemporaryDirectory() as directory:
+	with tempfile.TemporaryDirectory() as directory, open(stdin, "rb") if stdin else contextlib.nullcontext(subprocess.DEVNULL) as source:
 		path = os.path.join(directory, "perf.csv")
 		perf = ["perf", "stat", "-x", ",", "-e", ",".join(PERF_EVENTS), "-o", path, "--"] + list(command)
-		subprocess.run(perf, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=merged, check=True)
+		subprocess.run(perf, stdin=source, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=merged, check=True)
 		with open(path) as f:
 			return parse_perf_csv(f.read())
 

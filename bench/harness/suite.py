@@ -37,6 +37,10 @@ class Benchmark:
 	validate_output: pathlib.Path | None
 	time_args: tuple
 	time_output_sha256: str | None
+	# stdin comes from a generated input such as ("fasta", "1000") (see inputs.py)
+	validate_stdin: tuple | None = None
+	time_stdin: tuple | None = None
+	time_stdin_sha256: str | None = None
 
 
 @dataclasses.dataclass(frozen=True)
@@ -62,6 +66,9 @@ def load_benchmark(directory):
 		validate_output=directory / expected if expected else None,
 		time_args=tuple(spec.get("time_args", ())),
 		time_output_sha256=spec.get("time_output_sha256") or None,
+		validate_stdin=tuple(spec["validate_stdin"]) if "validate_stdin" in spec else None,
+		time_stdin=tuple(spec["time_stdin"]) if "time_stdin" in spec else None,
+		time_stdin_sha256=spec.get("time_stdin_sha256") or None,
 	)
 
 

@@ -1,5 +1,7 @@
+import itertools
 import unittest
 
+import inputs
 import report
 import runner
 import suite
@@ -18,7 +20,28 @@ class SuiteTest(unittest.TestCase):
 		for benchmark in suite.load_benchmarks():
 			if benchmark.validate_output is not None:
 				self.assertTrue(benchmark.validate_output.exists(), benchmark.name)
-			self.assertTrue(benchmark.time_args or benchmark.name == "startup", benchmark.name)
+			self.assertTrue(benchmark.time_args or benchmark.time_stdin or benchmark.name == "startup", benchmark.name)
+
+
+class InputsTest(unittest.TestCase):
+	def test_fasta_matches_the_published_output(self):
+		# the published fasta output for 1000 is also k-nucleotide's published input
+		expected = (suite.PROGRAMS / "fasta" / "expected-1000.txt").read_bytes()
+		self.assertEqual(inputs.fasta(1000), expected)
+
+	def test_repeating_one_period_matches_stepping(self):
+		count = inputs.IM + 1000
+		symbols, final = inputs.random_sequence(inputs.HOMO_SAPIENS, count, 42)
+		# plain left-to-right additions (sum() compensates since Python 3.12)
+		cumulative = list(itertools.accumulate(p for _, p in inputs.HOMO_SAPIENS))
+		state = 42
+		stepped = []
+		for _ in range(count):
+			state = (state * inputs.IA + inputs.IC) % inputs.IM
+			k = next((k for k, limit in enumerate(cumulative[:-1]) if state / inputs.IM < limit), len(cumulative) - 1)
+			stepped.append(inputs.HOMO_SAPIENS[k][0])
+		self.assertEqual(symbols, "".join(stepped))
+		self.assertEqual(final, state)
 
 
 class PerfParseTest(unittest.TestCase):
@@ -52,6 +75,7 @@ def fake_raw():
 			implementations[f"{benchmark}/idiomatic/{variant}"] = {
 				"benchmark": benchmark, "category": "idiomatic", "variant": variant,
 				"args": ["50000000"] if benchmark == "n-body" else [],
+				"stdin": ["fasta", "1000"] if benchmark == "startup" else None,
 				"compile_ns": [500_000_000, 510_000_000, 520_000_000],
 				"binary_bytes": 150_000, "stripped_bytes": 140_000, "output_sha256": "ab" * 32,
 				"samples": samples(base + offset * base // 10),
@@ -80,6 +104,7 @@ class ReportTest(unittest.TestCase):
 		# c-gcc has no samples (so no column)
 		self.assertIn("| benchmark | input | c-clang | rust |", text)
 		self.assertIn("| n-body | 50000000 | **1.00** | 1.10 |", text)
+		self.assertIn("Input `< fasta 1000`", text)
 		nbody = text.split("## n-body", 1)[1]
 		self.assertLess(nbody.index("| c-clang |"), nbody.index("| rust |"))
 

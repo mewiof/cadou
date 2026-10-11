@@ -24,6 +24,7 @@ import time
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
+import inputs
 import machine
 import report
 import runner
@@ -96,13 +97,21 @@ def first_difference(expected, actual):
 	return f"expected {len(expected)} bytes, got {len(actual)}"
 
 
+def validate_stdin(benchmark):
+	return inputs.materialize(benchmark.validate_stdin) if benchmark.validate_stdin else None
+
+
+def time_stdin(benchmark):
+	return inputs.materialize(benchmark.time_stdin, benchmark.time_stdin_sha256) if benchmark.time_stdin else None
+
+
 def validate(implementations, builds):
 	failed = []
 	for implementation in implementations:
 		benchmark = implementation.benchmark
 		expected = benchmark.validate_output.read_bytes() if benchmark.validate_output else b""
 		with tempfile.TemporaryFile() as out:
-			runner.run([str(builds[implementation.key]["binary"]), *benchmark.validate_args], stdout=out)
+			runner.run([str(builds[implementation.key]["binary"]), *benchmark.validate_args], stdout=out, stdin=validate_stdin(benchmark))
 			out.seek(0)
 			actual = out.read()
 		if actual == expected:
@@ -121,7 +130,7 @@ def check_full_outputs(implementations, builds):
 		with tempfile.TemporaryDirectory() as scratch:
 			path = pathlib.Path(scratch) / "out"
 			with open(path, "wb") as out:
-				runner.run([str(builds[implementation.key]["binary"]), *implementation.benchmark.time_args], stdout=out, high_priority=True)
+				runner.run([str(builds[implementation.key]["binary"]), *implementation.benchmark.time_args], stdout=out, high_priority=True, stdin=time_stdin(implementation.benchmark))
 			hashes[implementation.key] = file_sha256(path)
 
 	failed = []
@@ -147,13 +156,14 @@ def check_full_outputs(implementations, builds):
 def measure(implementations, builds, reps, warmup, seed):
 	rng = random.Random(seed)
 	samples = {implementation.key: [] for implementation in implementations}
+	stdin = {implementation.key: time_stdin(implementation.benchmark) for implementation in implementations}
 	rounds = warmup + reps
 	start = time.monotonic()
 	for index in range(rounds):
 		order = list(implementations)
 		rng.shuffle(order)
 		for implementation in order:
-			sample = runner.run([str(builds[implementation.key]["binary"]), *implementation.benchmark.time_args], high_priority=True)
+			sample = runner.run([str(builds[implementation.key]["binary"]), *implementation.benchmark.time_args], high_priority=True, stdin=stdin[implementation.key])
 			if index >= warmup:
 				samples[implementation.key].append(dataclasses.asdict(sample))
 		elapsed = time.monotonic() - start
@@ -166,7 +176,8 @@ def collect_counters(implementations, builds, reps):
 	counters = {}
 	for implementation in implementations:
 		command = [str(builds[implementation.key]["binary"]), *implementation.benchmark.time_args]
-		counters[implementation.key] = [runner.perf_counters(command) for _ in range(reps)]
+		stdin = time_stdin(implementation.benchmark)
+		counters[implementation.key] = [runner.perf_counters(command, stdin=stdin) for _ in range(reps)]
 		log(f"counted {implementation.key}")
 	return counters
 
@@ -246,6 +257,8 @@ def command_run(args):
 			"source": implementation.source.relative_to(ROOT).as_posix(),
 			"source_sha256": file_sha256(implementation.source),
 			"args": list(implementation.benchmark.time_args),
+			"stdin": list(implementation.benchmark.time_stdin) if implementation.benchmark.time_stdin else None,
+			"stdin_sha256": inputs.sha256_of(time_stdin(implementation.benchmark)) if implementation.benchmark.time_stdin else None,
 			"command": entry["command"],
 			"compile_ns": entry["compile_ns"],
 			"binary_bytes": entry["binary_bytes"],
