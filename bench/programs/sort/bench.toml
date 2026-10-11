@@ -1,0 +1,5 @@
+# n random 64-bit integers sorted
+validate_args = ["1000"]
+validate_output = "expected-1000.txt"
+time_args = ["10000000"]
+time_output_sha256 = "efc9893ea3ad68dccd3fe513f0f55d6998e69e6c2e50147af66f019bf22692c5"

@@ -1,0 +1,5 @@
+# n random 64-bit keys inserted then 2n lookups (half of them absent)
+validate_args = ["1000"]
+validate_output = "expected-1000.txt"
+time_args = ["4000000"]
+time_output_sha256 = "86bad19f2b641539990420021f196e7f6858d4da742270d57b36ab5991143005"

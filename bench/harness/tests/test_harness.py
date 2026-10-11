@@ -22,6 +22,11 @@ class SuiteTest(unittest.TestCase):
 				self.assertTrue(benchmark.validate_output.exists(), benchmark.name)
 			self.assertTrue(benchmark.time_args or benchmark.time_stdin or benchmark.name == "startup", benchmark.name)
 
+	def test_stdin_specs_are_parsed(self):
+		[benchmark] = suite.load_benchmarks(["k-nucleotide"])
+		self.assertEqual(benchmark.validate_stdin, ("fasta", "1000"))
+		self.assertEqual(benchmark.time_stdin[0], "fasta")
+
 
 class InputsTest(unittest.TestCase):
 	def test_fasta_matches_the_published_output(self):

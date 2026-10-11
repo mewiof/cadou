@@ -1,0 +1,6 @@
+# frequencies and counts of k-nucleotides in the third sequence of fasta output read from stdin
+validate_stdin = ["fasta", "1000"]
+validate_output = "expected-1000.txt"
+time_stdin = ["fasta", "2500000"]
+time_stdin_sha256 = "e3600e481ef68b6cd9ac155f93f40ff06a4094128f62895eb37b28ebad7cab72"
+time_output_sha256 = "6db529a39e08a232e12dd59f3bc3c4edd6a4c3c8f5bb3bc6eb3ab7963709a00c"

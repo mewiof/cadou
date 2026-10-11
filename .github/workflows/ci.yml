@@ -35,5 +35,5 @@ jobs:
           echo "$HOME/bin" >> "$GITHUB_PATH"
           command -v rustup || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain none
           echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
-      - run: python3 bench/harness/bench.py fetch zig rust
+      - run: python3 bench/harness/bench.py fetch zig rust klib
       - run: python3 bench/harness/bench.py validate

@@ -69,6 +69,7 @@ Sources behind the survey/ADRs/benchmarks. "read" is the date a source was last 
 | source | date | link |
 | --- | --- | --- |
 | The Computer Language Benchmarks Game (descriptions + the published outputs used as validation files) | outputs fetched 2026-10-11 | https://benchmarksgame-team.pages.debian.net/benchmarksgame/ |
+| klib's khash.h 0.2.8 (MIT) used by the C programs for hash tables | commit 5fc2090 from 2018-10-31 | https://github.com/attractivechaos/klib |
 | hyperfine README | 2.0.0 (read 2026-10-11) | https://github.com/sharkdp/hyperfine |
 | Cranelift | read 2026-10-11 | https://cranelift.dev/ |
 | Miri README (what Rust's interpreter detects) | read 2026-10-11 | https://github.com/rust-lang/miri |

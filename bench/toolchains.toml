@@ -1,4 +1,4 @@
-# pinned benchmark toolchains (latest stable releases on 2026-10-11)
+# pinned benchmark toolchains (latest stable releases on 2026-10-11) and the one C library
 # python bench/harness/bench.py fetch downloads/checks/unpacks them into .toolchains/
 # rustup installs the Rust pin: rustup toolchain install 1.99.0 --profile minimal
 #
@@ -48,3 +48,10 @@ bin = "bin"
 [gcc.x86_64-windows]
 url = "https://github.com/brechtsanders/winlibs_mingw/releases/download/16.2.0posix-14.0.0-ucrt-r2/winlibs-x86_64-posix-seh-gcc-16.2.0-mingw-w64ucrt-14.0.0-r2.zip"
 sha256 = "d5dbafc4a170e762ca6143151ec918fb9e2c72736fb14cd704abebc6bdd5276a"
+
+# khash.h from klib: the C programs' hash table (C has none of its own). One header for every host
+[klib]
+version = "0.2.8"
+commit = "5fc2090766753bdaa9e53e0cc0734b285a891c85"
+url = "https://raw.githubusercontent.com/attractivechaos/klib/5fc2090766753bdaa9e53e0cc0734b285a891c85/khash.h"
+sha256 = "4582c7fd4b98f61339ce677bb1daa7a45a53075b112a494a335525c4bda72074"

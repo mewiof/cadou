@@ -82,7 +82,10 @@ def unpack(archive, destination):
 		shutil.rmtree(destination)
 	destination.mkdir(parents=True)
 	print(f"unpacking {archive.name}")
-	if archive.name.endswith(".zip"):
+	if not archive.name.endswith((".zip", ".tar.xz", ".tar.gz")):
+		# a single file such as a header
+		shutil.copyfile(archive, destination / archive.name)
+	elif archive.name.endswith(".zip"):
 		with zipfile.ZipFile(archive) as z:
 			for info in z.infolist():
 				name = strip_top(info.filename)
@@ -121,7 +124,8 @@ def fetch(names=None):
 				continue
 			subprocess.run([rustup, "toolchain", "install", pin["version"], "--profile", "minimal"], check=True)
 			continue
-		entry = pin.get(host)
+		# a pin with its own url fits every host
+		entry = pin if "url" in pin else pin.get(host)
 		if entry is None:
 			print(f"{name}: no pinned build for {host}, PATH will be used")
 			continue
@@ -168,7 +172,7 @@ def first_version_line(text):
 
 def pinned_bin(name, pins, host, use_pins):
 	pin = pins[name]
-	if not use_pins or host not in pin:
+	if not use_pins or (host not in pin and "url" not in pin):
 		return None
 	directory = install_dir(name, pin)
 	if not (directory / MARKER).exists():
@@ -203,6 +207,11 @@ class Toolchains:
 			path, pinned = locate(program, gcc)
 			if path:
 				self.tools[program] = Tool(path, pinned, first_version_line(version_text([path, "--version"])))
+
+		# khash.h for the C programs (no fallback: C has no hash table to fall back to)
+		klib = pinned_bin("klib", pins, host, use_pins)
+		if klib is not None:
+			self.tools["klib"] = Tool(str(klib), True, f"{pins['klib']['version']} ({pins['klib']['commit'][:7]})")
 
 		zig = pinned_bin("zig", pins, host, use_pins)
 		path, pinned = locate("zig", zig)
@@ -243,17 +252,18 @@ def compile_command(toolchains, implementation, output, cache):
 	# flags follow docs/decisions/0003-benchmark-methodology.md
 	variant = implementation.variant
 	source = str(implementation.source)
+	include = [f"-I{toolchains.tools['klib'].path}"] if variant.language == "c" and "klib" in toolchains.tools else []
 	if variant.toolchain == "llvm":
 		compiler = toolchains.require("clang" if variant.language == "c" else "clang++")
 		standard = "-std=c17" if variant.language == "c" else "-std=c++23"
-		command = [compiler.path, standard, "-O3", "-march=native", "-flto", "-ffp-contract=off", "-fuse-ld=lld", source, "-o", str(output)]
+		command = [compiler.path, standard, "-O3", "-march=native", "-flto", "-ffp-contract=off", "-fuse-ld=lld", *include, source, "-o", str(output)]
 		if not WINDOWS:
 			command.append("-lm")
 		return command, compiler.env
 	if variant.toolchain == "gcc":
 		compiler = toolchains.require("gcc" if variant.language == "c" else "g++")
 		standard = "-std=c17" if variant.language == "c" else "-std=c++23"
-		command = [compiler.path, standard, "-O3", "-march=native", "-flto", "-flto-partition=one", "-ffp-contract=off", source, "-o", str(output)]
+		command = [compiler.path, standard, "-O3", "-march=native", "-flto", "-flto-partition=one", "-ffp-contract=off", *include, source, "-o", str(output)]
 		if WINDOWS:
 			# -static keeps stray MinGW runtime DLLs on PATH out of it. libstdc++exp holds
 			# the Windows terminal code of std::print (the link fails without it)
