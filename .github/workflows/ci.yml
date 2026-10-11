@@ -1,0 +1,39 @@
+# text rules + tests. Then every benchmark gets built and checked on Linux x86-64
+# and AArch64 (no timing on noisy shared runners)
+
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 tools/check_text.py
+      - run: python3 -m unittest discover -s bench/harness/tests -t bench/harness
+      - run: python3 -m unittest discover -s tools
+
+  benchmarks:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: compilers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-14 g++-14 clang lld
+          # libstdc++ 14 is the first with std::print (clang uses the newest GCC's)
+          mkdir -p "$HOME/bin"
+          ln -sf "$(command -v gcc-14)" "$HOME/bin/gcc"
+          ln -sf "$(command -v g++-14)" "$HOME/bin/g++"
+          echo "$HOME/bin" >> "$GITHUB_PATH"
+          command -v rustup || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain none
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - run: python3 bench/harness/bench.py fetch zig rust
+      - run: python3 bench/harness/bench.py validate
