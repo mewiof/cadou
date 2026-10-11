@@ -1,0 +1,4 @@
+# trees of depth 4..N (every node is its own allocation)
+validate_args = ["10"]
+validate_output = "expected-10.txt"
+time_args = ["19"]

@@ -1,0 +1,4 @@
+# 2N + 3N + 5N characters of DNA in 60-column lines
+validate_args = ["1000"]
+validate_output = "expected-1000.txt"
+time_args = ["25000000"]

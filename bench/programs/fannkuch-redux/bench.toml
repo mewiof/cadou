@@ -1,0 +1,4 @@
+# max flips and checksum over the N! permutations
+validate_args = ["7"]
+validate_output = "expected-7.txt"
+time_args = ["11"]

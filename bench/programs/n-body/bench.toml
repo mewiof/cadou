@@ -1,0 +1,4 @@
+# energy before and after N steps of a 5-body system
+validate_args = ["1000"]
+validate_output = "expected-1000.txt"
+time_args = ["50000000"]

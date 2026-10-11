@@ -1,0 +1,4 @@
+# spectral norm of an N x N matrix (10 power iterations)
+validate_args = ["100"]
+validate_output = "expected-100.txt"
+time_args = ["5500"]

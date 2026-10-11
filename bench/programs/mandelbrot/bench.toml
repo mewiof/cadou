@@ -1,0 +1,4 @@
+# N x N bitmap as binary PBM
+validate_args = ["200"]
+validate_output = "expected-200.pbm"
+time_args = ["8000"]
