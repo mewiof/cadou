@@ -86,7 +86,7 @@ The core has no compound assignment. One in the surface syntax lowers to `(set x
 
 ### 6.1 Integer arithmetic
 
-`+`/`-`/`*` take two operands of one type. A result that does not fit is an overflow. A checked build traps on it (section 11.4 has the unchecked side). Separate operations state another intent:
+`+`/`-`/`*` take two operands of one type. A result that does not fit is an overflow. A checked build traps on it. An unchecked build or block wraps ([ADR 0005](../docs/decisions/0005-integer-overflow.md)). Separate operations state another intent:
 
 | form | on overflow |
 | --- | --- |
@@ -193,7 +193,7 @@ The sign and the width of lengths and indices. Rust and Zig index with 64-bit `u
 
 ### 11.4 Overflow in unchecked builds
 
-An unchecked build either wraps or assumes no overflow. The cost of overflow checks in checked builds gets measured first.
+Settled by [ADR 0005](../docs/decisions/0005-integer-overflow.md): unchecked builds wrap (section 6.1). Assuming no overflow bought nothing on the suite. Checks cost 4% there and almost all of it in one loop they keep from vectorizing ([overflow.md](../docs/research/overflow.md)). How a checked loop keeps its vector code stays open.
 
 ### 11.5 Struct layout
 

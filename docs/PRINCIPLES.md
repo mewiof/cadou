@@ -18,8 +18,8 @@ When speed and safety pull apart, first look for a design that gives both (usual
 - Evidence over opinion. A performance claim needs reproducible data committed to this repository. "Should be faster" is not a result.
 - Every significant change goes hypothesis -> experiment -> measurement -> written conclusion -> decision.
 - Significant decisions become ADRs in [decisions/](decisions/) (context/options/evidence/decision/consequences/when to revisit).
-- Every work session gets a dated entry in [JOURNAL.md](JOURNAL.md) with the failed experiments too.
-- The repository always builds and passes its tests at the end of a session.
+- Every day of work gets a dated entry in [JOURNAL.md](JOURNAL.md) with the failed experiments too.
+- The repository always builds and passes its tests.
 - Facts about other languages come from primary sources (documentation/RFCs/standards/papers) with a version or a date.
 - Rewrites/deletions/breaking changes are fine whenever the evidence points there. Nothing is compatible with anything until a stable version gets declared.
 
@@ -38,7 +38,7 @@ Starting points. Each one gets challenged with data.
 - Data layout is first-class: explicit alignment/packed structs/bitfields with a defined layout/an easy switch between array-of-structs and struct-of-arrays.
 - Portable SIMD vector types and inline assembly are built in.
 - Compile-time execution replaces templates and textual macros (one language instead of two).
-- No undefined behavior in safe code. Where C leans on UB for speed (signed overflow e.g.) there are explicit operations instead: wrapping/saturating/checked arithmetic + an explicit "assume no overflow". Intent gets stated instead of inferred.
+- No undefined behavior in safe code. Where C leans on UB for speed (signed overflow e.g.) there are explicit operations instead: wrapping/saturating/checked arithmetic + an explicit "assume no overflow". Intent gets stated instead of inferred. On the benchmark suite the UB of signed overflow bought nothing over wrapping ([overflow.md](research/overflow.md)).
 
 ### 3.3 Safety
 

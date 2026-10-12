@@ -23,6 +23,7 @@ In progress.
 - [x] first experiment on what a no-alias promise buys ([noalias.md](research/noalias.md))
 - [x] the baseline's open gaps explained from the generated code ([baseline-gaps.md](research/baseline-gaps.md))
 - [x] loops a run-time check cannot rescue ([noalias2.md](research/noalias2.md))/index types ([index-type.md](research/index-type.md))/clang's Windows defaults ([clang-msvc.md](research/clang-msvc.md))
+- [x] the cost of overflow checks ([overflow.md](research/overflow.md))
 - [ ] Linux reference run with perf counters (WSL2 on the same machine once it is back on)
 - [ ] an AArch64 machine for timing
 - [x] k-nucleotide with a rule for which hash table each language may use
@@ -78,7 +79,7 @@ Semantics first and syntax last.
 ## Next steps
 
 1. Reference interpreter milestones 1 and 2 with golden tests ([ADR 0004](decisions/0004-reference-interpreter.md)).
-2. The cost of overflow checks across the suite (Rust with and without `overflow-checks` + C with trapping overflow) as evidence for [spec section 11.4](../spec/core.md#114-overflow-in-unchecked-builds).
-3. Linux run under WSL2 with perf counters as soon as Virtual Machine Platform is back on (Rust's n-body is waiting for counters).
-4. EXPERT n-body and spectral-norm to see how far the idiomatic versions are from the machine.
-5. More systems workloads (memcpy/memset kernels/JSON parsing/an allocator-heavy one/matrix multiply).
+2. Linux run under WSL2 with perf counters as soon as Virtual Machine Platform is back on (Rust's n-body is waiting for counters).
+3. EXPERT n-body and spectral-norm to see how far the idiomatic versions are from the machine.
+4. More systems workloads (memcpy/memset kernels/JSON parsing/an allocator-heavy one/matrix multiply).
+5. A checked spectral-norm loop that keeps its vector code (one check in front of the loop per [overflow.md](research/overflow.md)).
