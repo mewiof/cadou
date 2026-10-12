@@ -1,0 +1,5 @@
+// the operands of one operation share one type
+(fn main () unit
+	(let a i32 1)
+	(let b i64 2)
+	(out (+ a b)))

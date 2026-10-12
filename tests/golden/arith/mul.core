@@ -1,0 +1,15 @@
+// products at the edges of i32/u64/i64 with the wrapping and saturating forms
+(fn main () unit
+	(let a i32 46341)
+	(out (* a 46340))
+	(out (wrapping* a 46341))
+	(out (saturating* a 46341))
+	(out (saturating* a -46341))
+	(let b u64 4294967296)
+	(out (* b 4294967295))
+	(out (wrapping* b b))
+	(out (saturating* b b))
+	(let c i64 -9223372036854775808)
+	(out (wrapping* c -1))
+	(out (saturating* c -1))
+	(out (* b b)))

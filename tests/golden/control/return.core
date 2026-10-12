@@ -1,0 +1,10 @@
+// return leaves the function from inside a loop (a loop without break has no end)
+(fn first_square_above ((limit i32)) i32
+	(let n i32 0)
+	(loop
+		(set n (+ n 1))
+		(if (> (* n n) limit) (return n))))
+
+(fn main () unit
+	(out (first_square_above 50))
+	(out (first_square_above 0)))

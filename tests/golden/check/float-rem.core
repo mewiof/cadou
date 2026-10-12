@@ -1,0 +1,4 @@
+// floats have no remainder
+(fn main () unit
+	(let a f64 1.0)
+	(out (% a 2.0)))

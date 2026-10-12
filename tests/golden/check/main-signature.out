@@ -1,0 +1,1 @@
+2:5: error: main takes nothing and returns i32 or unit

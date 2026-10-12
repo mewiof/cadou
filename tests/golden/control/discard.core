@@ -1,0 +1,7 @@
+// discard runs its operand and drops the value
+(fn trace ((tag i32)) i32
+	(out tag)
+	tag)
+
+(fn main () unit
+	(discard (trace 9)))

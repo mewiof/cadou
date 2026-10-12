@@ -1,0 +1,3 @@
+-128
+255
+8:7: trap: -1 does not fit in u8 (spec 6.4)

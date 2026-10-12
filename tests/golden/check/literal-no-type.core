@@ -1,0 +1,3 @@
+// a literal alone has no type
+(fn main () unit
+	(out 5))

@@ -1,0 +1,8 @@
+// narrowing keeps a value that fits and traps on one that does not
+(fn main () unit
+	(let a i64 -128)
+	(out (narrow i8 a))
+	(let b i32 255)
+	(out (narrow u8 b))
+	(let c i8 -1)
+	(out (narrow u8 c)))

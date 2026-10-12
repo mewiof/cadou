@@ -1,0 +1,3 @@
+// main takes nothing and returns i32 or unit
+(fn main ((argc i32)) i32
+	argc)

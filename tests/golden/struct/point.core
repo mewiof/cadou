@@ -1,0 +1,17 @@
+// make/fields/set on a field. Assignments and calls copy the struct
+(struct Point
+	(x f64)
+	(y f64))
+
+(fn moved ((p Point) (dx f64)) Point
+	(set (. p x) (+ (. p x) dx))
+	p)
+
+(fn main () unit
+	(let a Point (make Point (y 2.0) (x 1.0)))
+	(let b Point a)
+	(set (. b x) 5.0)
+	(out a)
+	(out b)
+	(out (moved a 0.5))
+	(out (. a x)))

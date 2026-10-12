@@ -1,0 +1,5 @@
+// make gives every field a value
+(struct Point (x i32) (y i32))
+
+(fn main () unit
+	(out (make Point (x 1))))

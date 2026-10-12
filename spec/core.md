@@ -1,6 +1,6 @@
 # Core semantics
 
-Draft from 2026-10-11. Meaning comes before syntax ([PRINCIPLES.md](../docs/PRINCIPLES.md)). Examples use the parenthesized notation that the reference interpreter reads ([ADR 0004](../docs/decisions/0004-reference-interpreter.md)). It is a test format and not the surface syntax.
+Draft from 2026-10-11 and revised on 2026-10-12. Meaning comes before syntax ([PRINCIPLES.md](../docs/PRINCIPLES.md)). Examples use the parenthesized notation that the reference interpreter reads ([notation.md](notation.md) + [ADR 0004](../docs/decisions/0004-reference-interpreter.md)). It is a test format and not the surface syntax.
 
 ## 1. Scope
 
@@ -40,9 +40,13 @@ No integer type changes width with the target. Lengths and indices have one fixe
 
 A struct has named fields. Fields lie in declared order at their natural alignment (the layout C gives the same declaration). Packed and over-aligned layouts have to be asked for.
 
+`make` builds a struct with every field given once in any order (the values run in written order). `(. v field)` reads a field. No struct contains itself by value (directly or through other structs/unions/optionals).
+
 ### 3.5 Tagged unions
 
 A tagged union is one of several named cases. Each case has a payload type. Only `match` reads the tag. The layout belongs to the compiler (a null pointer may encode the empty case of `(opt (ptr T))` e.g.).
+
+A case written without a type carries unit. `make` builds a value of one case.
 
 ### 3.6 Optionals
 
@@ -55,6 +59,14 @@ A function value is the address of code. There are no closures.
 ### 3.8 Conversions
 
 No value changes type without a written operation (section 6.4).
+
+### 3.9 Never
+
+`break`/`continue`/`return` and a loop that no `break` leaves have type never. No value has it and no program can write it. An expression of type never fits wherever a value is expected.
+
+### 3.10 Literals
+
+A literal has no type of its own. It takes the type its place expects: the declared type of a local or parameter/the type of the other operand/the function's result. A literal whose type nothing decides is an error. So is a literal that does not fit its type. Integer literals only become integers and float literals only floats. A float literal rounds once to the nearest value of its type ([ADR 0006](../docs/decisions/0006-literal-types-and-unused-values.md)).
 
 ## 4. Memory
 
@@ -80,43 +92,56 @@ Operands evaluate left to right before their operation. Arguments evaluate left 
 
 The core has no compound assignment. One in the surface syntax lowers to `(set x (+ x e))` with the place of `x` evaluated once. The rules above then read the old value of `x` before `e` runs. C leaves that order open and Rust evaluates `e` first. Reading first lets a value kept in a register survive a call inside `e` without any aliasing promise ([noalias2.md](../docs/research/noalias2.md)).
 
-`if` and `match` are expressions. A `match` covers every case or fails to compile. `loop` repeats until a `break` (labels pick the loop). `return` leaves the function.
+A block (the body of a function/`do`/`loop`) runs its forms in order. The last form gives the block's value. A block that is empty or ends in a `let` gives unit. Every form before the last has type unit or never. `(discard v)` drops a value nobody reads ([ADR 0006](../docs/decisions/0006-literal-types-and-unused-values.md)).
+
+`let` makes a local for the rest of its block. Parameters are locals too. Every local can be set (section 11.7). A name stays unique while it is visible: a local shadows no other local and no function or type. Arguments and results are copies (structs too).
+
+`if` and `match` are expressions. A `match` has one arm per case and no catch-all arm or it fails to compile. The arm `((case x) body)` binds a copy of the payload to `x`. `((case) body)` ignores it.
+
+`loop` repeats until a `break` (labels pick the loop). `continue` starts the next round. A loop has type unit when a `break` leaves it and never otherwise. `break` carries no value. `return` leaves the function.
 
 ## 6. Operations
 
 ### 6.1 Integer arithmetic
 
-`+`/`-`/`*` take two operands of one type. A result that does not fit is an overflow. A checked build traps on it. An unchecked build or block wraps ([ADR 0005](../docs/decisions/0005-integer-overflow.md)). Separate operations state another intent:
+`+`/`-`/`*` take two operands of one type. A result that does not fit is an overflow. A checked build traps on it. An unchecked build or block wraps ([ADR 0005](../docs/decisions/0005-integer-overflow.md)). Separate operations state another intent (each one exists for `-` and `*` as well):
 
 | form | on overflow |
 | --- | --- |
 | `(wrapping+ a b)` | keeps the low bits |
 | `(saturating+ a b)` | clamps to the type's range |
-| `(checked+ a b)` | gives `none` |
+| `(checked+ a b)` | gives `none` (an `opt` of the type) |
 | `(unchecked+ a b)` | undefined (section 8.2) |
+
+`(neg a)` negates a signed integer (the minimum overflows) or a float.
 
 ### 6.2 Division
 
-Division truncates toward zero. Dividing by zero traps. The minimum value divided by -1 overflows (section 6.1).
+Division truncates toward zero. The remainder `%` has the sign of the dividend. Dividing by zero traps. The minimum value divided by -1 overflows (section 6.1). `%` traps there as well although the remainder 0 fits (one check serves both operations).
 
 ### 6.3 Shifts and bits
 
-A shift by the bit width or more traps. Bitwise operations are defined for every input.
+`<<` and `>>` take the shift amount in the type of the shifted value. An amount below 0 or from the bit width up traps. Bits shifted out are gone. `>>` shifts in copies of the sign bit for signed types and zeros for unsigned ones. `&`/`|`/`^`/`~` are defined for every input.
 
 ### 6.4 Conversions
 
-- widening to a type that holds every source value: exact
-- narrowing: checked (traps when the value does not fit) or truncating (keeps the low bits)
-- integer to float: rounds to nearest with ties to even
-- float to integer: traps on NaN or out of range. A saturating form clamps instead (NaN gives 0)
+Five operations convert numbers:
+
+| form | converts | result |
+| --- | --- | --- |
+| `(widen T v)` | an integer to a type that holds every value of its type/`f32` to `f64` | exact |
+| `(narrow T v)` | an integer to a type that lacks some of its values/a float to an integer | the value rounded toward zero or a trap where that does not fit (NaN never fits) |
+| `(wrap T v)` | an integer to an integer | the value modulo 2^bits |
+| `(saturate T v)` | the same as `narrow` | the value clamped to the range of `T` (NaN gives 0) |
+| `(float T v)` | an integer to a float/`f64` to `f32` | rounded to nearest with ties to even (an infinity beyond the range) |
 
 ### 6.5 Floats
 
-IEEE 754 arithmetic rounded to nearest with ties to even. Every operation rounds once. `(+ (* a b) c)` rounds twice. Fused multiply-add is an operation of its own. Nothing reorders float arithmetic. NaN payloads are unspecified.
+IEEE 754 arithmetic rounded to nearest with ties to even. Every operation rounds once. `(+ (* a b) c)` rounds twice. Fused multiply-add is an operation of its own: `(fma a b c)`. Nothing reorders float arithmetic. Nothing traps either: dividing by zero gives an infinity or NaN. Floats have no remainder. NaN payloads are unspecified.
 
 ### 6.6 Comparisons
 
-Both operands have one type. `and`/`or` evaluate their right operand only when the left one does not decide.
+Both operands have one type: an integer type/a float type/`bool` (`bool` with `==` and `!=` only). Every comparison with NaN is false except `!=`. `and`/`or` evaluate their right operand only when the left one does not decide.
 
 ### 6.7 Indexing and slicing
 
@@ -124,13 +149,13 @@ Both operands have one type. `and`/`or` evaluate their right operand only when t
 
 ## 7. Errors
 
-An error is a value. A function that can fail returns a tagged union of its result and an error. A value of a must-use type cannot be dropped without a written discard.
+An error is a value. A function that can fail returns a tagged union of its result and an error. Like any value it cannot be dropped without a written `discard` (section 5).
 
 ## 8. Traps and undefined behavior
 
 ### 8.1 Traps
 
-A trap ends the program with a nonzero status and a message that names the check. Nothing unwinds.
+A trap ends the program with status 101 and a message on standard error that names the check and its place in the source. Nothing unwinds. Running out of stack traps too. The interpreter traps at a fixed depth of 100000 nested calls and expressions on every host.
 
 ### 8.2 Unchecked code
 
@@ -148,6 +173,10 @@ The interpreter stops with a report on everything in section 8.2 except C contra
 ## 9. Calls into C
 
 A C function gets declared with C types: fixed-width integers/`f32`/`f64`/pointers/structs with C layout. Calling it is unchecked code. The call follows the platform's C calling convention.
+
+### 9.1 Test output
+
+Until calls into C exist `(out v)` writes `v` and a newline to standard output. Integers print in decimal and booleans as `true`/`false`. A float prints as the shortest decimal that reads back as the same value: plain digits from 0.0001 to below 1e16 (`0.1`/`-0.0`/`100.0`) and an exponent elsewhere (`1e16`/`9e-5`). The special values print as `inf`/`-inf`/`nan`. Structs and cases print in the notation: `(Point (x 1.0) (y 2.0))`/`(some 5)`/`(none)`.
 
 ## 10. Examples
 
@@ -177,6 +206,8 @@ A tagged union and a match that covers both cases:
 		((square side) (* side side))))
 ```
 
+The second example runs in [tests/golden/union/shape.core](../tests/golden/union/shape.core).
+
 ## 11. Open questions
 
 ### 11.1 Temporal safety
@@ -202,3 +233,7 @@ Declared order (section 3.4) keeps layout predictable. Reordering by size would 
 ### 11.6 Strings
 
 One string type. The candidate is UTF-8 bytes in a slice.
+
+### 11.7 Immutable locals
+
+Every local can be set (section 5). A local that cannot be set would tell readers and the optimizer more. It would also be a second form for locals.

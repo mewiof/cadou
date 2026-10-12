@@ -1,0 +1,10 @@
+// wrap keeps the low bits (the value modulo 2^bits)
+(fn main () unit
+	(let a i32 300)
+	(out (wrap u8 a))
+	(out (wrap i8 a))
+	(let b i8 -1)
+	(out (wrap u64 b))
+	(out (wrap u8 b))
+	(let c u64 18446744073709551615)
+	(out (wrap i64 c)))

@@ -1,0 +1,13 @@
+// checked arithmetic gives an opt and match reads it
+(fn describe ((value (opt u8))) i32
+	(match value
+		((some x) (widen i32 x))
+		((none) -1)))
+
+(fn main () unit
+	(let a u8 200)
+	(out (checked+ a 55))
+	(out (checked+ a 56))
+	(out (describe (checked* a 2)))
+	(out (describe (checked- a 100)))
+	(out (describe (make (opt u8) (none)))))

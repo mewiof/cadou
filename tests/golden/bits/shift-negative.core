@@ -1,0 +1,5 @@
+// a negative shift amount traps
+(fn main () unit
+	(let a i64 1)
+	(let n i64 -1)
+	(out (>> a n)))

@@ -1,0 +1,7 @@
+// fma rounds once where a multiply and an add round twice
+(fn main () unit
+	(let a f64 0.1)
+	(let b f64 10.0)
+	(let c f64 -1.0)
+	(out (+ (* a b) c))
+	(out (fma a b c)))

@@ -1,0 +1,16 @@
+// IEEE 754 arithmetic rounds once per operation and gives infinities and NaN instead of traps
+(fn main () unit
+	(let a f64 0.1)
+	(let b f64 0.2)
+	(out (+ a b))
+	(out (/ 1.0 a))
+	(let zero f64 0.0)
+	(out (/ 1.0 zero))
+	(out (/ -1.0 zero))
+	(out (/ zero zero))
+	(out (* zero -1.0))
+	(let big f64 1e308)
+	(out (* big 10.0))
+	(let x f32 16777216.0)
+	(out (+ x 1.0))
+	(out (- x 1.0)))

@@ -1,0 +1,4 @@
+// the minimum divided by -1 overflows
+(fn main () unit
+	(let a i32 -2147483648)
+	(out (/ a -1)))

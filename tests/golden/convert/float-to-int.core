@@ -1,0 +1,10 @@
+// float to integer drops the fraction and traps when the rest does not fit
+(fn main () unit
+	(let a f64 -3.99)
+	(out (narrow i32 a))
+	(let b f64 255.5)
+	(out (narrow u8 b))
+	(let c f32 -0.75)
+	(out (narrow u8 c))
+	(let d f64 256.0)
+	(out (narrow u8 d)))

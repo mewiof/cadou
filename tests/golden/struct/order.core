@@ -1,0 +1,9 @@
+// field values run in written order whatever the declared order
+(struct Pair (first i32) (second i32))
+
+(fn trace ((tag i32)) i32
+	(out tag)
+	tag)
+
+(fn main () unit
+	(out (make Pair (second (trace 2)) (first (trace 1)))))

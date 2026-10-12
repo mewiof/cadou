@@ -1,0 +1,4 @@
+// unsigned values have no negation
+(fn main () unit
+	(let a u32 1)
+	(out (neg a)))

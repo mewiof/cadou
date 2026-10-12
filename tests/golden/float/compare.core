@@ -1,0 +1,11 @@
+// every comparison with NaN is false except != and -0.0 equals 0.0
+(fn main () unit
+	(let nan f64 (/ 0.0 0.0))
+	(let one f64 1.0)
+	(out (== nan nan))
+	(out (!= nan nan))
+	(out (< nan one))
+	(out (>= nan one))
+	(let z f64 0.0)
+	(out (== z (neg z)))
+	(out (< (neg z) z)))

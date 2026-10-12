@@ -1,0 +1,15 @@
+// a label picks the loop that break and continue leave
+(fn main () unit
+	(let pairs i32 0)
+	(let i i32 0)
+	(loop :rows
+		(set i (+ i 1))
+		(if (> i 4) (break :rows))
+		(let j i32 0)
+		(loop
+			(set j (+ j 1))
+			(if (> j i) (continue :rows))
+			(if (== (* i j) 6) (break :rows))
+			(set pairs (+ pairs 1))))
+	(out i)
+	(out pairs))

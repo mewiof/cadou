@@ -1,0 +1,1 @@
+4:7: trap: nan does not fit in i64 (spec 6.4)

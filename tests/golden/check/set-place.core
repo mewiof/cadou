@@ -1,0 +1,4 @@
+// set writes to a local or a field of one
+(fn main () unit
+	(let a i32 1)
+	(set (+ a 1) 2))

@@ -1,0 +1,10 @@
+// loop repeats until break. continue starts the next round
+(fn main () unit
+	(let i i32 0)
+	(let sum i32 0)
+	(loop
+		(set i (+ i 1))
+		(if (> i 10) (break))
+		(if (== (% i 2) 0) (continue))
+		(set sum (+ sum i)))
+	(out sum))

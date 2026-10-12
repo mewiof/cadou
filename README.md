@@ -1,8 +1,8 @@
 # CADOU
 
-CADOU (a working name) is a research project for a systems programming language. The goal is to beat C/C++/Rust/Zig at run time by a measurable margin while staying memory-safe by default. It is an experiment rather than a product. There is no compiler yet.
+CADOU (a working name) is a research project for a systems programming language. The goal is to beat C/C++/Rust/Zig at run time by a measurable margin while staying memory-safe by default. It is an experiment rather than a product. There is no compiler yet but a reference interpreter runs the first part of the core.
 
-Status on 2026-10-11: phase 1 is in progress and phase 2 has started on paper. The benchmark harness and nine benchmarks exist in C/C++/Rust/Zig (measured on one Windows machine so far). In the [latest baseline](bench/results/2026-10-11-i7-14700kf-windows-2/report.md) no competitor wins everywhere (fastest counts out of nine: gcc 4/clang 2/zig 2/rust 1). A first draft of the core semantics is in [spec/core.md](spec/core.md). Phases and next steps live in [docs/ROADMAP.md](docs/ROADMAP.md).
+Status on 2026-10-12: phase 1 is in progress and phase 2 has started. The benchmark harness and nine benchmarks exist in C/C++/Rust/Zig (measured on one Windows machine so far). In the [latest baseline](bench/results/2026-10-11-i7-14700kf-windows-2/report.md) no competitor wins everywhere (fastest counts out of nine: gcc 4/clang 2/zig 2/rust 1). A first draft of the core semantics is in [spec/core.md](spec/core.md). Its integers/floats/functions/control flow/structs/tagged unions run in the reference interpreter in [compiler/](compiler/). Phases and next steps live in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Priorities
 
@@ -28,16 +28,16 @@ The design hypotheses behind them are in [docs/PRINCIPLES.md](docs/PRINCIPLES.md
 | `bench/` | benchmark harness/programs/results ([bench/README.md](bench/README.md)) |
 | `docs/` | principles/roadmap/journal/decisions/research/style |
 | `spec/` | language specification (from phase 2) |
-| `compiler/` | bootstrap compiler (from phase 2) |
+| `compiler/` | bootstrap compiler (so far the reference interpreter) |
 | `std/` | standard library |
-| `tests/` | compiler tests |
+| `tests/` | golden tests of the core and later compiler tests |
 | `fuzz/` | fuzzers and corpora |
 | `examples/` | example programs and later a small kernel |
 | `tools/` | repository scripts |
 
 ## Building and testing
 
-Nothing to build yet besides the benchmarks. With Python 3.11+/git/rustup:
+With Python 3.11+/git/rustup:
 
 ```sh
 python bench/harness/bench.py fetch
@@ -46,6 +46,7 @@ python bench/harness/bench.py run --label my-machine
 python -m unittest discover -s bench/harness/tests -t bench/harness
 python -m unittest discover -s tools
 python tools/check_text.py
+cd compiler && cargo test
 ```
 
 ## License

@@ -1,0 +1,11 @@
+// bitwise operations on unsigned and signed integers
+(fn main () unit
+	(let a u8 0xF0)
+	(let b u8 0x3c)
+	(out (& a b))
+	(out (| a b))
+	(out (^ a b))
+	(out (~ a))
+	(let c i8 -16)
+	(out (& c 0x7f))
+	(out (~ c)))

@@ -1,0 +1,8 @@
+// negation of signed integers and floats. The minimum has no negation
+(fn main () unit
+	(let a i16 -32767)
+	(out (neg a))
+	(let b f64 0.0)
+	(out (neg b))
+	(let c i16 -32768)
+	(out (neg c)))

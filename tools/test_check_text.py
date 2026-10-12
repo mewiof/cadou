@@ -33,6 +33,12 @@ class ProseTest(unittest.TestCase):
 		self.assertTrue(problems("The harness - which is small - runs fast."))
 
 
+class FileTest(unittest.TestCase):
+	def test_core_notation_comments(self):
+		self.assertEqual(check_text.check("tests/golden/a.core", b"// adds two numbers\n(fn main () unit)\n"), [])
+		self.assertEqual(len(check_text.check("tests/golden/a.core", b"// Adds two numbers.\n(fn main () unit)\n")), 2)
+
+
 class MessageTest(unittest.TestCase):
 	def test_wrapped_paragraph_is_one_text(self):
 		message = "Add the harness\n\nIt times every program\nand checks every output.\n# a git comment, ignored, really\n"

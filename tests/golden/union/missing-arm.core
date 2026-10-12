@@ -1,0 +1,8 @@
+// match covers every case
+(union Color (red) (green) (blue))
+
+(fn main () unit
+	(let c Color (make Color (red)))
+	(match c
+		((red) (return))
+		((blue) (return))))

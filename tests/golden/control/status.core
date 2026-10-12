@@ -1,0 +1,5 @@
+// the i32 that main returns is the exit status
+(fn main () i32
+	(let code i32 3)
+	(out code)
+	code)

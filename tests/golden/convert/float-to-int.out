@@ -1,0 +1,4 @@
+-3
+255
+0
+10:7: trap: 256.0 does not fit in u8 (spec 6.4)

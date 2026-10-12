@@ -1,0 +1,9 @@
+// each case gets one arm
+(union Color (red) (green))
+
+(fn main () unit
+	(let c Color (make Color (red)))
+	(match c
+		((red) (return))
+		((green) (return))
+		((red) (return))))

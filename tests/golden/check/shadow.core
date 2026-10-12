@@ -1,0 +1,6 @@
+// a name stays unique while it is visible
+(fn main () unit
+	(let a i32 1)
+	(do
+		(let a i32 2)
+		(out a)))

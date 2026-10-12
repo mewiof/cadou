@@ -1,0 +1,18 @@
+// recursion: Fibonacci/Euclid/Ackermann
+(fn fib ((n i64)) i64
+	(if (< n 2) n (+ (fib (- n 1)) (fib (- n 2)))))
+
+(fn gcd ((a u64) (b u64)) u64
+	(if (== b 0) a (gcd b (% a b))))
+
+(fn ack ((m i32) (n i32)) i32
+	(if (== m 0)
+		(+ n 1)
+		(if (== n 0)
+			(ack (- m 1) 1)
+			(ack (- m 1) (ack m (- n 1))))))
+
+(fn main () unit
+	(out (fib 20))
+	(out (gcd 1071 462))
+	(out (ack 2 3)))

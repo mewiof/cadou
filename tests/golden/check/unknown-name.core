@@ -1,0 +1,3 @@
+// a name needs a declaration
+(fn main () unit
+	(out total))

@@ -1,0 +1,4 @@
+// a label names an enclosing loop
+(fn main () unit
+	(loop :outer
+		(loop (break :inner))))

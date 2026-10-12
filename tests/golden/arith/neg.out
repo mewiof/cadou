@@ -1,0 +1,3 @@
+32767
+-0.0
+8:7: trap: neg -32768 overflows i16 (spec 6.1)

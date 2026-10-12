@@ -1,0 +1,4 @@
+// NaN fits no integer type
+(fn main () unit
+	(let nan f64 (/ 0.0 0.0))
+	(out (narrow i64 nan)))

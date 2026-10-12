@@ -16,7 +16,7 @@ import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-LINE_COMMENT = {".c": "//", ".h": "//", ".cpp": "//", ".hpp": "//", ".rs": "//", ".zig": "//", ".py": "#", ".toml": "#", ".yml": "#", ".yaml": "#", ".sh": "#"}
+LINE_COMMENT = {".c": "//", ".h": "//", ".cpp": "//", ".hpp": "//", ".rs": "//", ".zig": "//", ".core": "//", ".py": "#", ".toml": "#", ".yml": "#", ".yaml": "#", ".sh": "#"}
 HASH_COMMENT_NAMES = {".gitignore", ".gitattributes", ".editorconfig", ".clang-format"}
 
 # YAML forbids tabs (.clang-format is YAML too)

@@ -1,0 +1,1 @@
+4:7: error: narrow does not convert u8 to i16 (every value fits: widen)

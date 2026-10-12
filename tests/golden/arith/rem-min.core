@@ -1,0 +1,4 @@
+// the minimum modulo -1 traps like the division
+(fn main () unit
+	(let a i64 -9223372036854775808)
+	(out (% a -1)))

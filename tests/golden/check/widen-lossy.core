@@ -1,0 +1,4 @@
+// widen goes only where every value fits
+(fn main () unit
+	(let a i8 -1)
+	(out (widen u16 a)))

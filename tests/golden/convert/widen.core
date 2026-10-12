@@ -1,0 +1,9 @@
+// widening keeps the value
+(fn main () unit
+	(let a i8 -128)
+	(out (widen i64 a))
+	(let b u8 255)
+	(out (widen i16 b))
+	(out (widen u64 b))
+	(let x f32 0.1)
+	(out (widen f64 x)))

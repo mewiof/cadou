@@ -1,0 +1,3 @@
+// break needs a loop
+(fn main () unit
+	(break))

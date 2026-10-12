@@ -1,0 +1,11 @@
+// operands and arguments run left to right
+(fn trace ((tag i32)) i32
+	(out tag)
+	tag)
+
+(fn digits ((a i32) (b i32) (c i32)) i32
+	(+ (* a 100) (+ (* b 10) c)))
+
+(fn main () unit
+	(out (- (trace 1) (trace 2)))
+	(out (digits (trace 4) (trace 5) (trace 6))))

@@ -1,0 +1,6 @@
+2
+64
+-1
+0
+-2147483648
+12:7: trap: 1 << 32 shifts i32 by 32 bits (0 to 31 allowed) (spec 6.3)

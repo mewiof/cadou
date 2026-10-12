@@ -1,0 +1,18 @@
+// addition at the edges of i8/u8/i64/u64 with the wrapping and saturating forms
+(fn main () unit
+	(let a i8 100)
+	(out (+ a 27))
+	(out (wrapping+ a 100))
+	(out (saturating+ a 100))
+	(out (saturating+ a -128))
+	(let b u8 200)
+	(out (+ b 55))
+	(out (wrapping+ b 100))
+	(out (saturating+ b 100))
+	(let c i64 9223372036854775800)
+	(out (+ c 7))
+	(out (wrapping+ c 8))
+	(let d u64 18446744073709551615)
+	(out (wrapping+ d 1))
+	(out (saturating+ d d))
+	(out (+ a 28)))

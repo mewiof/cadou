@@ -1,0 +1,14 @@
+// saturate clamps to the target's range. NaN gives 0
+(fn main () unit
+	(let a i32 300)
+	(out (saturate u8 a))
+	(out (saturate i8 a))
+	(let b i32 -300)
+	(out (saturate u8 b))
+	(out (saturate i8 b))
+	(let x f64 -1e300)
+	(out (saturate i32 x))
+	(let y f64 (/ 0.0 0.0))
+	(out (saturate u16 y))
+	(let z f32 3.99)
+	(out (saturate u8 z)))

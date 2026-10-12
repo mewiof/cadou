@@ -1,0 +1,9 @@
+// fields of fields
+(struct Point (x i32) (y i32))
+(struct Line (from Point) (to Point))
+
+(fn main () unit
+	(let line Line (make Line (from (make Point (x 0) (y 0))) (to (make Point (x 3) (y 4)))))
+	(set (. (. line to) y) 40)
+	(out line)
+	(out (- (. (. line to) y) (. (. line from) y))))

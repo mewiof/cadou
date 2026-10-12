@@ -1,0 +1,16 @@
+// out writes the shortest decimal that reads back as the same float. Plain digits run
+// from 0.0001 to below 1e16
+(fn main () unit
+	(let a f64 9999999999999998.0)
+	(out a)
+	(let b f64 1e16)
+	(out b)
+	(let c f64 0.0001)
+	(out c)
+	(let d f64 0.00009)
+	(out d)
+	(let e f32 0.1)
+	(out e)
+	(out (widen f64 e))
+	(let f f32 3.4028235e38)
+	(out f))

@@ -45,10 +45,10 @@ In progress.
 
 Semantics first and syntax last.
 
-- [ ] written sketch of the core semantics with example programs (functions/integers/structs/tagged unions/slices/pointers/control flow/modules/C ABI calls). First draft in [spec/core.md](../spec/core.md)
+- [ ] written sketch of the core semantics with example programs (functions/integers/structs/tagged unions/slices/pointers/control flow/modules/C ABI calls). First draft in [spec/core.md](../spec/core.md) with the test notation in [spec/notation.md](../spec/notation.md)
 - [ ] reference interpreter as the oracle for differential testing ([ADR 0004](decisions/0004-reference-interpreter.md))
-	- [ ] integers/booleans/functions/control flow with every arithmetic check
-	- [ ] structs/tagged unions/match
+	- [x] integers/booleans/functions/control flow with every arithmetic check (in [compiler/](../compiler/) with golden tests in [tests/golden/](../tests/golden/))
+	- [x] structs/tagged unions/match
 	- [ ] arrays/slices/pointers/the heap with bounds checks and provenance
 	- [ ] modules
 	- [ ] host functions in place of C calls
@@ -78,7 +78,7 @@ Semantics first and syntax last.
 
 ## Next steps
 
-1. Reference interpreter milestones 1 and 2 with golden tests ([ADR 0004](decisions/0004-reference-interpreter.md)).
+1. Reference interpreter milestone 3: arrays/slices/pointers/the heap with bounds checks and provenance + unchecked blocks and operations ([ADR 0004](decisions/0004-reference-interpreter.md)).
 2. Linux run under WSL2 with perf counters as soon as Virtual Machine Platform is back on (Rust's n-body is waiting for counters).
 3. EXPERT n-body and spectral-norm to see how far the idiomatic versions are from the machine.
 4. More systems workloads (memcpy/memset kernels/JSON parsing/an allocator-heavy one/matrix multiply).

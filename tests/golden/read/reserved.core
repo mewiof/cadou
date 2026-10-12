@@ -1,0 +1,3 @@
+// the words of the notation name nothing else
+(fn main () unit
+	(let loop i32 1))

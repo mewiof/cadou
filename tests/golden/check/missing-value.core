@@ -1,0 +1,6 @@
+// a function with a result ends with one
+(fn answer () i32
+	(let a i32 42))
+
+(fn main () unit
+	(discard (answer)))

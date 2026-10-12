@@ -1,0 +1,14 @@
+// integers to floats and f64 to f32 round to nearest with ties to even
+(fn main () unit
+	(let a i32 16777217)
+	(out (float f32 a))
+	(let b i32 16777219)
+	(out (float f32 b))
+	(let c i64 9007199254740993)
+	(out (float f64 c))
+	(let d u64 18446744073709551615)
+	(out (float f64 d))
+	(let x f64 0.1)
+	(out (float f32 x))
+	(let y f64 1e300)
+	(out (float f32 y)))

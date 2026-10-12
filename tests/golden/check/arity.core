@@ -1,0 +1,6 @@
+// a call passes every parameter
+(fn add ((a i32) (b i32)) i32
+	(+ a b))
+
+(fn main () unit
+	(discard (add 1)))

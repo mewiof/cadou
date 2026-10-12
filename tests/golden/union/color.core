@@ -1,0 +1,14 @@
+// cases without a payload carry unit
+(union Color (red) (green) (blue))
+
+(fn next ((color Color)) Color
+	(match color
+		((red) (make Color (green)))
+		((green) (make Color (blue)))
+		((blue) (make Color (red)))))
+
+(fn main () unit
+	(let c Color (make Color (red)))
+	(set c (next (next c)))
+	(out c)
+	(out (next c)))

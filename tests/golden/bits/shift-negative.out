@@ -1,0 +1,1 @@
+5:7: trap: 1 >> -1 shifts i64 by -1 bits (0 to 63 allowed) (spec 6.3)

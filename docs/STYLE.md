@@ -12,7 +12,7 @@ Applies to every text file in the repository. `python tools/check_text.py` check
 
 ## Comments
 
-- `//` in C/C++/Rust/Zig and `#` in Python/TOML/YAML. No `/* */` blocks and no `///` doc comments.
+- `//` in C/C++/Rust/Zig/the core notation (`.core`) and `#` in Python/TOML/YAML. No `/* */` blocks and no `///` doc comments.
 - Start lowercase. No period at the end of a comment. A multi-line comment uses one `//` per line (periods and capitals only between its sentences).
 - Short. Say why rather than what. A mental model where the code is not obvious. "e.g." lists for examples.
 - Tags:

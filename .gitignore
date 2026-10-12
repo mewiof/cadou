@@ -4,5 +4,8 @@
 # benchmark builds and scratch output
 /bench/build/
 
+# cargo's build output
+/compiler/target/
+
 __pycache__/
 *.pyc

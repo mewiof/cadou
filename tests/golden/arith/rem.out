@@ -1,0 +1,6 @@
+1
+-1
+1
+-1
+15
+11:7: trap: -7 % 0 divides by zero (spec 6.2)

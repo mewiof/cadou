@@ -1,0 +1,9 @@
+// unsigned subtraction below zero traps unless a wrapping or saturating form asks otherwise
+(fn main () unit
+	(let a u32 3)
+	(out (- a 3))
+	(out (wrapping- a 4))
+	(out (saturating- a 4))
+	(let b i16 -32768)
+	(out (saturating- b 1))
+	(out (- a 4)))

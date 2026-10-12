@@ -1,0 +1,10 @@
+// the arms of a match share one type
+(union Choice (left) (right))
+
+(fn pick ((choice Choice)) i32
+	(match choice
+		((left) 1)
+		((right) true)))
+
+(fn main () unit
+	(discard (pick (make Choice (left)))))

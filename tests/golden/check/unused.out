@@ -1,0 +1,1 @@
+6:2: error: this i32 value goes unused (discard drops it)

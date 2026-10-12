@@ -1,0 +1,11 @@
+// if gives a value with an else branch and works as a statement without one
+(fn sign ((x i32)) i32
+	(if (< x 0) -1 (if (== x 0) 0 1)))
+
+(fn main () unit
+	(out (sign -5))
+	(out (sign 0))
+	(out (sign 7))
+	(let x i32 3)
+	(if (> x 2) (set x 0))
+	(out x))

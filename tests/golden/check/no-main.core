@@ -1,0 +1,3 @@
+// a program starts at main
+(fn start () unit
+	(return))

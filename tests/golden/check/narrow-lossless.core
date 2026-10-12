@@ -1,0 +1,4 @@
+// narrow is for conversions that can fail
+(fn main () unit
+	(let a u8 1)
+	(out (narrow i16 a)))

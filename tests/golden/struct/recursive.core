@@ -1,0 +1,7 @@
+// a struct cannot hold itself by value (an opt holds its payload by value too)
+(struct Node
+	(value i32)
+	(next (opt Node)))
+
+(fn main () unit
+	(return))

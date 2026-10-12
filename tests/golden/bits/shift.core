@@ -1,0 +1,12 @@
+// bits shifted out are gone and >> copies the sign bit of signed values. An amount of
+// the bit width or more traps
+(fn main () unit
+	(let a u8 0x81)
+	(out (<< a 1))
+	(out (>> a 1))
+	(let b i8 -128)
+	(out (>> b 7))
+	(out (<< b 1))
+	(let one i32 1)
+	(out (<< one 31))
+	(out (<< one 32)))

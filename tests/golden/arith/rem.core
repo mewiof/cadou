@@ -1,0 +1,11 @@
+// the remainder takes the sign of the dividend. A zero divisor traps
+(fn main () unit
+	(let a i32 7)
+	(let b i32 -7)
+	(out (% a 2))
+	(out (% b 2))
+	(out (% a -2))
+	(out (% b -2))
+	(let c u8 255)
+	(out (% c 16))
+	(out (% b 0)))

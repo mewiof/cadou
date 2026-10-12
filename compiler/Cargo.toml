@@ -1,0 +1,13 @@
+[package]
+name = "cadou"
+version = "0.0.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[dependencies]
+
+# the interpreter recurses once per nesting level. Unoptimized that takes 14 KiB per
+# level and eval::MAX_DEPTH would need 1.3 GiB of stack (0.8 KiB per level at opt-level 1)
+[profile.dev]
+opt-level = 1

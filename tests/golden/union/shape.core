@@ -1,0 +1,14 @@
+// the tagged union and the match of spec/core.md section 10
+(union Shape
+	(circle f64)
+	(square f64))
+
+(fn area ((shape Shape)) f64
+	(match shape
+		((circle r) (* 3.141592653589793 (* r r)))
+		((square side) (* side side))))
+
+(fn main () unit
+	(out (area (make Shape (circle 1.0))))
+	(out (area (make Shape (square 1.5))))
+	(out (make Shape (square 2.0))))

@@ -1,0 +1,10 @@
+// and/or skip the right operand when the left one decides
+(fn noisy ((value bool) (tag i32)) bool
+	(out tag)
+	value)
+
+(fn main () unit
+	(out (and (noisy false 1) (noisy true 2)))
+	(out (or (noisy true 3) (noisy false 4)))
+	(out (and (noisy true 5) (noisy false 6)))
+	(out (not (or (noisy false 7) (noisy false 8)))))
