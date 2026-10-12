@@ -2,9 +2,37 @@
 
 Newest entry first.
 
-## 2026-10-11 (second session)
+## 2026-10-12
 
-Session 2 explained the open baseline gaps and ran four experiments. It also added three benchmarks and started phase 2 on paper.
+Overflow checks got measured and the reference interpreter runs its first two milestones.
+
+### Done
+
+- [overflow.md](research/overflow.md): the suite with overflow checks on and off (Rust) and with wrapping/assumed/trapping signed overflow (C by clang and gcc). [ADR 0005](decisions/0005-integer-overflow.md) settles spec section 11.4: checked builds trap and unchecked builds wrap.
+- The reference interpreter in [compiler/](../compiler/) with Rust 1.99.0 pinned and no dependencies. It reads/checks/runs integers/floats/booleans/functions/control flow/structs/tagged unions/opt. 64 golden programs in [tests/golden/](../tests/golden/) + 10 unit tests (one compares every pair of 8-bit operands with Rust's own arithmetic). A new CI job runs them on Linux x86-64 and AArch64 (not run yet).
+- [spec/notation.md](../spec/notation.md) lists the forms. [spec/core.md](../spec/core.md) got the rules the checker forced (sections 3.9/3.10/5/6/8.1/9.1/11.7). [ADR 0006](decisions/0006-literal-types-and-unused-values.md): literals take their type from context and every unused value needs `discard`.
+- [COMPLEXITY.md](COMPLEXITY.md) counts something for the first time: 40 reserved words/2626 spec words/1948 compiler lines/16 features.
+
+### Findings
+
+- Overflow checks cost Rust 3.9%/clang 6.4%/gcc 11.4% over the suite (geometric means) and 0.7%/0.4%/1.5% without spectral-norm. There the checks take away the vector divisions in all three compilers (no `vdivpd` left in the binaries and 10 to 31 overflow branches instead).
+- Assuming no overflow bought nothing over wrapping (clang -0.9%/gcc +0.2%). clang's wrapping spectral-norm is even 7% faster.
+- gcc's checked fannkuch-redux is 14% slower (not analyzed).
+- clang's vector code in spectral-norm comes from the SLP vectorizer during the LTO link ("Vectorized horizontal reduction" on the loop unrolled 4 times). The loop vectorizer refuses the loop because the sum has to stay in order. A plain `-O3` build without LTO keeps every division scalar.
+- rustc 1.99.0 types an unconstrained literal as `i32` and accepts an ignored `i32` result without a warning. Zig 0.17.0 rejects both (`comptime_int` and "value of type 'i32' ignored").
+
+### Failed or surprising
+
+- The first golden run overflowed the interpreter's stack. An unoptimized evaluation level takes 14 KiB of stack against 0.8 KiB optimized and the depth test goes 100000 levels deep. The dev profile builds with opt-level 1 now.
+- Rust's fasta ran 1.1% faster with overflow checks (significant and unexplained).
+
+### Next
+
+- The rest of [ROADMAP.md](ROADMAP.md#next-steps): interpreter milestone 3 (memory with provenance + unchecked code)/the Linux run/EXPERT versions/more workloads/a checked spectral-norm loop that keeps its vector code.
+
+## 2026-10-11: baseline gaps and the core draft
+
+The open baseline gaps got explained and four experiments ran. Three benchmarks joined the suite and phase 2 started on paper.
 
 ### Done
 
@@ -64,9 +92,9 @@ Fastest counts: gcc 4 (2 in C and 2 in C++)/clang 2/zig 2/rust 1. sort alone mov
 
 - The rest of [ROADMAP.md](ROADMAP.md#next-steps): the reference interpreter (milestones 1 and 2)/the cost of overflow checks/the Linux run/EXPERT versions/more workloads.
 
-## 2026-10-11
+## 2026-10-11: foundations and the first baseline
 
-Session 1 covered phase 0 and phase 1 up to a first baseline.
+Phase 0 and phase 1 up to a first baseline.
 
 ### Done
 
